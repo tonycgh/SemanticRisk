@@ -138,13 +138,23 @@ Versioning and citation guidance will be added as the framework stabilizes.
 
 ---
 
+## Framework vs Implementations
+
+SemanticRisk refers to a conceptual framework and risk taxonomy.
+
+The framework itself is non-commercial and intended to remain an open reference that can be cited, adapted, and evaluated independently.
+
+Implementations that apply this framework — including diagnostic reports, audits, or monitoring systems — may exist as separate works. These implementations are not part of this repository and do not alter the neutrality of the framework itself.
+
+---
+
 ## Relationship to Tools and Products
 
-This repository and the SemanticRisk site are **non-commercial reference materials**.
+This repository contains only the SemanticRisk reference framework.
 
-Any future tooling, APIs, or services will be clearly separated from the reference framework and built *on top of it*, not *inside it*.
+Tools, services, or diagnostic systems that apply this framework may exist separately and are not distributed through this repository. Such implementations do not change the scope, intent, or neutrality of the framework itself.
 
-This separation is intentional and permanent.
+This separation is intentional.
 
 ---
 
@@ -158,6 +168,15 @@ This framework is intended to be:
 - adapted with attribution
 
 It is not intended to be enclosed, rebranded, or presented as proprietary without clear acknowledgment.
+
+---
+
+## Applying the Framework
+
+For examples of how the SemanticRisk framework can be applied to real-world public content and AI interpretation scenarios, see:
+https://semanticrisk.io
+
+The site focuses on application and observation, not definition.
 
 ---
 
