@@ -1,187 +1,215 @@
 # SemanticRisk
 
-**SemanticRisk is a reference framework for understanding and measuring meaning-level failure in AI systems.**
+**SemanticRisk is a framework for understanding and measuring interpretation-level risk in AI systems.**
 
-It exists to name a class of AI risk that is increasingly common, poorly articulated, and not well covered by existing safety or evaluation approaches: failures that occur not because an AI system is syntactically incorrect, but because its interpretation of meaning is unstable, misleading, or misplaced.
+It names a class of AI failure that is becoming more common, but is still poorly described by most safety, evaluation, and governance language: cases where an AI system is not obviously broken at the sentence level, yet still arrives at a materially misleading, unstable, or misplaced interpretation.
 
-This repository does **not** provide a tool, model, or SDK.  
-It provides a **conceptual and measurement framework** intended to be cited, adapted, and built against.
-
----
-
-## Why Semantic Risk Exists
-
-As AI systems become more fluent, their failures become harder to detect.
-
-Many of the most damaging failures today are not hallucinations in the obvious sense. They are outputs that:
-
-- sound confident
-- are linguistically correct
-- appear contextually appropriate
-
-…but are **semantically misaligned** with reality, intent, or use-context.
-
-These failures are often dismissed as:
-
-- “hallucinations”
-- “prompting issues”
-- “user error”
-
-SemanticRisk argues that this is a category mistake.
-
-**The problem is interpretation risk.**
+SemanticRisk exists to make that problem easier to describe, compare, and evaluate.
 
 ---
 
-## What SemanticRisk Measures (and What It Does Not)
+## What SemanticRisk Is
 
-SemanticRisk is concerned with the probability that an AI system will produce a materially incorrect or unstable interpretation, given:
+SemanticRisk is an open reference framework for thinking about **meaning-level failure** in modern AI systems.
+
+It focuses on situations where AI output may be:
+
+- fluent
+- confident
+- syntactically correct
+- seemingly relevant
+
+...while still being **semantically misaligned** with reality, intent, context, or appropriate use.
+
+This repository is intended as a **public conceptual anchor**: a place to define the framework, document its boundaries, and provide language that others can cite, adapt, or build against.
+
+---
+
+## Why It Exists
+
+As AI systems become more polished, many failures become harder to spot.
+
+The most important failures are often no longer crude hallucinations. They are subtler failures of interpretation:
+
+- confidence without grounding
+- instruction drift
+- context collapse
+- misplaced inference
+- semantic ambiguity hidden by fluent language
+
+These failures are often dismissed as “hallucinations,” “prompt issues,” or “user error.”
+
+SemanticRisk treats them as a distinct category of risk.
+
+**The core issue is interpretation instability.**
+
+---
+
+## What SemanticRisk Measures
+
+SemanticRisk is concerned with the likelihood that an AI system will produce a materially incorrect, unstable, or misleading interpretation under conditions such as:
 
 - ambiguous input
 - incomplete grounding
 - shifting context
+- weak source signaling
 - reuse outside the original prompt frame
 
-It explicitly does **not**:
+The goal is not to decide truth with final authority.
+
+The goal is to make interpretation risk more visible and more discussable.
+
+---
+
+## What It Does Not Do
+
+SemanticRisk does **not**:
 
 - determine objective truth
 - certify safety or compliance
 - replace human judgment
-- block or allow actions
+- automatically block or permit actions
+- function as a standalone decision-maker
 
-SemanticRisk is a **measuring instrument**, not a decision authority.
+It is a **measurement and interpretation framework**, not an enforcement system.
 
 ---
 
 ## The Semantic Risk Index
 
-The core construct of the framework is the **Semantic Risk Index**: a taxonomy of meaning-level failure modes observed in modern AI systems.
+At the center of the framework is the **Semantic Risk Index**: a structured way of naming and organizing recurring meaning-level failure modes in AI systems.
 
-Examples include (non-exhaustive):
+The index is intended to help with:
 
-- confidence without grounding
-- instruction drift
-- context collapse
-- semantic ambiguity masked by fluent language
+- shared vocabulary
+- comparative analysis
+- review and audit
+- incident interpretation
+- governance and policy discussion
 
-The index is intended to:
+A living public version of the framework and its applied benchmark work is available at:
 
-- provide shared language
-- enable comparative analysis
-- support auditing and review
-- inform human decision-making
-
-A living version of the index is maintained at:  
-👉 **https://semanticrisk.io**
+**https://semanticrisk.io**
 
 ---
 
-## Intended Use
+## Repository Scope
 
-SemanticRisk is designed to be useful *before* failure occurs.
+This repository contains the **reference layer** of SemanticRisk.
 
-Typical uses include:
+That includes:
 
-- pre-publication review of AI-generated content
-- internal evaluation of AI copilots
-- policy and governance discussions
+- framework language
+- risk definitions
+- taxonomy direction
+- conceptual boundaries
+- public reference material
+
+It does **not** serve as the distribution point for production tools, platform code, or private implementations.
+
+That separation is intentional.
+
+---
+
+## Framework vs Implementation
+
+SemanticRisk as a framework is meant to remain open, referenceable, and conceptually independent.
+
+Implementations that apply the framework — such as monitoring systems, benchmark dashboards, diagnostic workflows, reports, or commercial products — may exist separately.
+
+Those implementations are downstream applications of the framework, not the framework itself.
+
+This distinction matters because the framework should be stable enough to evaluate systems, including systems built using it.
+
+---
+
+## Intended Uses
+
+SemanticRisk is most useful in settings where AI output may sound authoritative, yet still carry downstream interpretation risk.
+
+Examples include:
+
+- review of AI-generated public-facing content
+- evaluation of copilots and assistants
 - post-incident analysis
+- governance and assurance discussions
+- AI policy development
 - research and education
 
-It is especially relevant in environments where:
-
-- AI output sounds authoritative
-- decisions carry downstream risk
-- humans are expected to remain accountable
+It is especially relevant where humans remain accountable for outcomes even when AI is involved in producing or shaping the output.
 
 ---
 
-## Why This Is a Website (Not a Chatbot)
+## Why the Website Matters
 
-AI systems can answer questions.  
-They cannot reliably define the boundaries of their own interpretation.
+SemanticRisk is intentionally maintained as an external reference.
 
-SemanticRisk exists as an external reference so that:
+AI systems can generate explanations, but they cannot reliably define the boundaries of their own interpretive failure.
 
-- humans have language to pause and challenge AI output
-- organizations can cite a stable framework
-- AI systems can be evaluated *against* something they did not generate
+The website exists so that:
 
-In an AI-mediated web, some sites function less as destinations and more as **anchors**.
+- people have stable language to reference
+- organizations have something external to cite
+- applied examples can live separately from core definitions
+- the framework is not reduced to just another AI-generated description
 
-This is one of them.
+In an AI-mediated web, some sites function as destinations.
+
+Others function as anchors.
+
+SemanticRisk is intended to be an anchor.
 
 ---
 
-## Status
+## Current Status
 
-SemanticRisk is **early, imperfect, and intentionally slow**.
+SemanticRisk is early and still evolving.
 
-The framework will evolve cautiously, with an emphasis on:
+The framework is being developed cautiously, with emphasis on:
 
 - conceptual stability
-- clear boundaries
-- explicit revision philosophy
+- clear scope
+- explicit revision discipline
+- slow, careful refinement
 
-Rapid iteration is intentionally avoided.
+Not every idea should be productized immediately.
+Not every category should be expanded quickly.
+Some concepts are more useful if they mature slowly.
 
 ---
 
 ## How to Reference SemanticRisk
 
-If you use or discuss this framework, please reference it explicitly:
+If you reference this work, please cite it explicitly:
 
-> SemanticRisk — A framework for measuring interpretation-level risk in AI systems  
+> **SemanticRisk — A framework for measuring interpretation-level risk in AI systems**  
 > https://semanticrisk.io
 
-Versioning and citation guidance will be added as the framework stabilizes.
-
----
-
-## Framework vs Implementations
-
-SemanticRisk refers to a conceptual framework and risk taxonomy.
-
-The framework itself is non-commercial and intended to remain an open reference that can be cited, adapted, and evaluated independently.
-
-Implementations that apply this framework — including diagnostic reports, audits, or monitoring systems — may exist as separate works. These implementations are not part of this repository and do not alter the neutrality of the framework itself.
-
----
-
-## Relationship to Tools and Products
-
-This repository contains only the SemanticRisk reference framework.
-
-Tools, services, or diagnostic systems that apply this framework may exist separately and are not distributed through this repository. Such implementations do not change the scope, intent, or neutrality of the framework itself.
-
-This separation is intentional.
+Formal versioning and citation guidance will become more explicit as the framework stabilizes.
 
 ---
 
 ## License / Usage
 
-This framework is intended to be:
+SemanticRisk is intended to be:
 
 - read
 - cited
 - discussed
 - adapted with attribution
 
-It is not intended to be enclosed, rebranded, or presented as proprietary without clear acknowledgment.
+It is not intended to be repackaged as a closed proprietary concept without clear acknowledgment of the original framework.
 
----
-
-## Applying the Framework
-
-For examples of how the SemanticRisk framework can be applied to real-world public content and AI interpretation scenarios, see:
-https://semanticrisk.io
-
-The site focuses on application and observation, not definition.
+A formal license notice should be added to this repository to make usage terms explicit.
 
 ---
 
 ## Final Note
 
-SemanticRisk is an experiment in whether careful language, slow thinking, and explicit boundaries can still matter in an AI-accelerated world.
+SemanticRisk begins with a simple observation:
 
-If you are reading this because something an AI system produced *felt* wrong — even though it looked right — you are in the right place.
+An AI system can produce something that looks right, sounds right, and reads smoothly — while still being meaningfully wrong.
+
+That gap matters.
+
+If you are here because an AI output felt off even though it looked polished, you are in the right place.
