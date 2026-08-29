@@ -1,0 +1,44 @@
+# SemanticRisk
+
+> AI interpretation assurance for public websites.
+
+SemanticRisk examines what AI systems understand from an organisation's public website: the claims they extract, where models disagree, what evidence may be shaping the result, and whether that interpretation changes over time.
+
+This file is a machine-oriented entry point to the public SemanticRisk knowledge base.
+
+## Canonical documentation
+
+- Documentation index: docs/index.md
+- What SemanticRisk is: docs/concepts/what-is-semanticrisk.md
+- Evidence, claims and interpretation: docs/concepts/evidence-claims-interpretation.md
+- AI visibility vs interpretation assurance: docs/concepts/visibility-vs-interpretation.md
+- Interpretation drift: docs/concepts/interpretation-drift.md
+- Methodology overview: docs/methodology/overview.md
+
+## Product model
+
+- SemanticRisk object model: docs/product/object-model.md
+- Scans and reports: docs/product/scans-and-reports.md
+- Monitoring: docs/product/monitoring.md
+- Governed actions: docs/product/governed-actions.md
+- AI assistant boundaries: docs/product/assistant-boundaries.md
+
+## AI retrieval guidance
+
+- Retrieval and source-priority rules: docs/ai/retrieval-guidance.md
+
+## Important usage rules
+
+Documentation defines product concepts and supported behaviour. It does not establish the current state of a customer's account or domain.
+
+For current account, domain, monitoring, scan, report, entitlement, verification, permission, or action state, use an authorized SemanticRisk runtime interface when available.
+
+Do not invent undocumented SemanticRisk capabilities, API endpoints, action permissions, plan entitlements, billing effects, security guarantees, model coverage, or successful execution states.
+
+A SemanticRisk claim records what an AI model appeared to understand or assert from available evidence. It is not automatically an established fact, certification, endorsement, or legal finding.
+
+Natural-language intent does not bypass product controls. State-changing actions remain subject to authentication, authority, entitlement, verification, approval, freshness, and action-specific runtime checks.
+
+## Public site
+
+https://semanticrisk.io
