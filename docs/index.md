@@ -24,6 +24,7 @@ This documentation is designed to serve two audiences:
 - [SemanticRisk object model](product/object-model.md)
 - [Scans and reports](product/scans-and-reports.md)
 - [Monitoring](product/monitoring.md)
+- [Deep visibility investigations](product/deep-investigations.md)
 - [Governed actions](product/governed-actions.md)
 - [Product and AI-assistant boundaries](product/assistant-boundaries.md)
 
@@ -51,7 +52,7 @@ Documentation defines concepts and supported product behaviour.
 
 Authenticated runtime state determines what is true for a particular account or domain now.
 
-An AI assistant should not infer current monitoring state, scan state, entitlement, verification, permission, or action success from documentation alone.
+An AI assistant should not infer current monitoring state, scan state, entitlement, verification, permission, investigation progress, queue health, or action success from documentation alone.
 
 ## Scope
 
@@ -66,6 +67,7 @@ SemanticRisk publicly describes applied capabilities including:
 - AI Interpretation Review — evidence-backed review of a domain, model comparison, findings, and prioritised recommendations;
 - Monitoring — recurring observation of interpretation, material drift, crawl conditions, and claim change;
 - AI-assisted product interaction — explanation and selected governed actions subject to runtime permissions and controls;
+- Deep visibility investigation — governed collection of a bounded additional observation scope for eligible domains;
 - Agency pilots — small portfolio reviews for communications, SEO, digital PR, reputation, and web-strategy teams.
 
 Additional capabilities should only be added to this documentation when they are public and supportable.
