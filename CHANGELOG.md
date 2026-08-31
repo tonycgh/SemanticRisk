@@ -14,6 +14,12 @@ It is not a production deployment log and does not include private implementatio
 - AI-assistant behavioural and retrieval boundaries.
 - Machine-oriented `llms.txt` discovery entry point.
 - Documentation maintenance contract requiring regular review against active product development.
+- Comprehensive AI Visibility & Interpretation Review contract, including current US$200 one-time pricing, five governed verification scans, human-gated launch fulfillment, evidence-coverage boundaries, and optional continuation into recurring monitoring.
+
+### Changed
+
+- Public product index now reflects the Comprehensive AI Visibility & Interpretation Review rather than the earlier generic AI Interpretation Review description.
+- Runtime-state guidance now explicitly includes Review order status, delivery status, and verification-credit balance.
 
 ### Maintenance policy
 
