@@ -19,7 +19,9 @@ This file is a machine-oriented entry point to the public SemanticRisk knowledge
 
 - SemanticRisk object model: docs/product/object-model.md
 - Scans and reports: docs/product/scans-and-reports.md
+- Comprehensive AI Visibility & Interpretation Review: docs/product/comprehensive-review.md
 - Monitoring: docs/product/monitoring.md
+- Deep visibility investigations: docs/product/deep-investigations.md
 - Governed actions: docs/product/governed-actions.md
 - AI assistant boundaries: docs/product/assistant-boundaries.md
 
@@ -31,9 +33,9 @@ This file is a machine-oriented entry point to the public SemanticRisk knowledge
 
 Documentation defines product concepts and supported behaviour. It does not establish the current state of a customer's account or domain.
 
-For current account, domain, monitoring, scan, report, entitlement, verification, permission, or action state, use an authorized SemanticRisk runtime interface when available.
+For current account, domain, monitoring, scan, report, Review order, Review delivery, verification-credit, entitlement, verification, permission, investigation, queue, or action state, use an authorized SemanticRisk runtime interface when available.
 
-Do not invent undocumented SemanticRisk capabilities, API endpoints, action permissions, plan entitlements, billing effects, security guarantees, model coverage, or successful execution states.
+Do not invent undocumented SemanticRisk capabilities, API endpoints, action permissions, plan entitlements, billing effects, security guarantees, model coverage, verification balances, delivery states, or successful execution states.
 
 A SemanticRisk claim records what an AI model appeared to understand or assert from available evidence. It is not automatically an established fact, certification, endorsement, or legal finding.
 
