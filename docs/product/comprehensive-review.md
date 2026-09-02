@@ -1,20 +1,24 @@
-# Comprehensive AI Visibility & Interpretation Review
+# Historical: Comprehensive AI Visibility & Interpretation Review
 
-The Comprehensive AI Visibility & Interpretation Review is SemanticRisk’s one-time professional assessment for a single company or primary domain.
+> **Status: retired / historical documentation.** This document describes an earlier launch-stage SemanticRisk offer and is not a current commercial product.
+>
+> Current product definition and pricing: https://semanticrisk.io/pricing/  
+> Current workflow: https://semanticrisk.io/how-it-works/  
+> Current machine-readable guide: https://semanticrisk.io/llms.txt
 
-Current public price: **US$200 one time**.
+The former Comprehensive AI Visibility & Interpretation Review was a one-time professional assessment for a single company or primary domain.
 
-The Review is designed to stand on its own. A customer does not need a recurring subscription in order to receive the purchased deliverable.
+Historical public price: **US$200 one time**.
 
-## Purpose
+The material below is retained only to preserve product history. It must not be used to infer current pricing, entitlement, report scope, verification credits, delivery commitments, subscriptions, or customer runtime state.
 
-The Review combines governed SemanticRisk measurement with supporting public evidence to answer a customer’s current business question and establish a point-in-time baseline that can be tested after changes are made.
+## Former purpose
 
-It is not a teaser report and should not be interpreted as only a single scan result.
+The Review combined governed SemanticRisk measurement with supporting public evidence to answer a customer's current business question and establish a point-in-time baseline that could be tested after changes were made.
 
-## Typical evidence scope
+## Former evidence scope
 
-Depending on availability and relevance to the customer brief, the Review can include:
+Depending on availability and relevance to the customer brief, the Review could include:
 
 - executive current-state assessment;
 - governed AI interpretation baseline;
@@ -27,54 +31,23 @@ Depending on availability and relevance to the customer brief, the Review can in
 - competitor or alternative-provider observations where supported by stored evidence;
 - prioritised remediation recommendations.
 
-Evidence layers that are unavailable or incomplete should be disclosed rather than inferred or replaced with generic generated conclusions.
+## Former verification model
 
-## Recommendations are hypotheses
+The retired Review included five governed verification scans for post-fix comparison. This verification-credit model is no longer the current commercial model.
 
-Recommended changes are remediation hypotheses, not guaranteed outcomes.
+## Former delivery model
 
-A recommendation should not be described as successful until a compatible follow-up SemanticRisk measurement shows that the relevant evidence or interpretation changed.
+At that launch stage, comprehensive enrichment and final delivery were human-gated and included a written professional report and a 30-minute findings call. These are historical terms and should not be presented as current SemanticRisk commitments.
 
-## Included verification scans
+## Current replacement
 
-The Review includes **five governed verification scans** for meaningful post-fix comparisons.
+SemanticRisk now uses one operational workspace and one customer-facing Unified Report per evidence cycle.
 
-A verification scan is intended to compare a changed domain against the preserved Review baseline.
+- Any public domain can be measured without proving ownership.
+- One SemanticRisk credit costs **US$5.95**.
+- Standard credit packs are **1, 10, 20 and 100 credits**.
+- A credit grants a current reusable Unified Report when no more than 30 days old, or funds/joins the next shared public-domain evidence cycle when no fresh reusable report exists.
+- An explicit early refresh consumes another credit.
+- Repeat completed evidence cycles can be compared for interpretation score, buyer-prompt visibility and mapped entity/sector change.
 
-A verification credit should only be treated as consumed when its governed follow-up measurement completes successfully according to the Review workflow.
-
-The assistant must not infer the remaining verification balance from documentation alone. Current runtime state is authoritative.
-
-## Human review and delivery
-
-At the current launch stage, comprehensive enrichment and final delivery remain human-gated.
-
-Before a Review is considered delivered, the product workflow should confirm the paid order, customer/domain association, completed Review-specific baseline, evidence coverage, immutable Review snapshot, report quality, and material limitations.
-
-The Review includes a written professional report and a 30-minute findings call.
-
-## Report interpretation
-
-The governed measurement and stored evidence form the factual baseline.
-
-Analyst commentary, explanations, and recommended changes are downstream interpretation. They do not alter the underlying governed score, claims, provider evidence, or measurement record.
-
-AI answers and public websites can change after the Review. The preserved baseline and verification scans exist so changes can be measured rather than assumed.
-
-## Optional continuation
-
-After the Review, a customer can use the included verification scans without buying recurring monitoring.
-
-Monitor or Professional can be offered when ongoing observation is useful, but recurring access is optional rather than a prerequisite for the purchased Review.
-
-## AI assistant rules
-
-When explaining or assisting with a Review, an AI assistant should:
-
-- distinguish the paid order from completion and delivery;
-- use runtime state to determine order, scan, snapshot, delivery, and verification status;
-- disclose incomplete evidence lanes instead of filling gaps by invention;
-- distinguish governed measurements from analyst interpretation;
-- describe remediation as testable hypotheses;
-- avoid claiming that a fix worked before compatible verification evidence exists;
-- avoid inventing verification-credit balances, delivery status, provider coverage, report sections, or findings not present in authorized runtime data.
+For any conflict between this historical document and the current live SemanticRisk product, the live sources at semanticrisk.io are authoritative.

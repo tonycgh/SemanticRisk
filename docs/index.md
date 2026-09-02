@@ -1,13 +1,36 @@
 # SemanticRisk Documentation Index
 
-SemanticRisk is an evidence-led framework and applied service for AI interpretation assurance of public websites.
+SemanticRisk provides AI visibility and interpretation intelligence for public websites.
 
-Its purpose is to examine what AI systems understand from an organisation's public website, which claims they extract, where interpretations differ, what evidence may be shaping the result, and whether that interpretation changes over time.
+It examines whether AI systems can access and surface an organisation, what they understand from its public website, which claims and classifications they form, and what changes between comparable evidence cycles.
 
-This documentation is designed to serve two audiences:
+This documentation serves two audiences:
 
 1. people using or evaluating SemanticRisk;
-2. AI systems that need an authoritative product knowledge corpus for explanation, troubleshooting, and governed assistance.
+2. AI systems that need a public product knowledge corpus for explanation, retrieval and governed assistance.
+
+## Current product first
+
+The live SemanticRisk website is authoritative for current commercial terms and authenticated runtime state.
+
+- Website: https://semanticrisk.io/
+- Documentation: https://semanticrisk.io/docs/
+- Methodology: https://semanticrisk.io/methodology/
+- Pricing: https://semanticrisk.io/pricing/
+- How it works: https://semanticrisk.io/how-it-works/
+- Machine guide: https://semanticrisk.io/llms.txt
+- Canonical claims: https://semanticrisk.io/claims.json
+
+SemanticRisk uses one six-stage public workflow:
+
+1. **Access & readiness** — can the relevant public website evidence be reached and discovered?
+2. **AI visibility** — does the organisation appear in controlled buyer-prompt observations?
+3. **Interpretation** — what claims, categories and descriptions are formed from the available evidence?
+4. **Drift & change** — what changed between comparable evidence cycles?
+5. **Assessment & action** — what is material, unusual or worth addressing?
+6. **Unified Report** — preserve the supporting evidence, findings, priorities and printable/PDF view for the evidence cycle.
+
+Any public domain can be measured without proving ownership. One SemanticRisk credit costs **US$5.95**. Standard packs are **1, 10, 20 and 100 credits**. One credit grants a current reusable Unified Report when no more than 30 days old, or funds/joins the next shared public-domain evidence cycle when no fresh reusable report exists. An explicit early refresh consumes another credit.
 
 ## Start here
 
@@ -23,11 +46,7 @@ This documentation is designed to serve two audiences:
 
 - [SemanticRisk object model](product/object-model.md)
 - [Scans and reports](product/scans-and-reports.md)
-- [Comprehensive AI Visibility & Interpretation Review](product/comprehensive-review.md)
-- [Monitoring](product/monitoring.md)
-- [Deep visibility investigations](product/deep-investigations.md)
-- [Governed actions](product/governed-actions.md)
-- [Product and AI-assistant boundaries](product/assistant-boundaries.md)
+- [AI assistant boundaries](product/assistant-boundaries.md)
 
 ### AI retrieval
 
@@ -37,45 +56,37 @@ This documentation is designed to serve two audiences:
 
 AI visibility asks whether an organisation appears in generated answers.
 
-SemanticRisk asks what AI systems understood from the organisation's public evidence and whether that interpretation is stable, supported, and consistent enough to review.
+SemanticRisk also asks what AI systems understood from the organisation's public evidence and whether that interpretation changed between comparable evidence cycles.
 
 ## Canonical reasoning chain
 
 A useful public object relationship is:
 
-**Domain → Evidence → Scan → Observation → Claim / Interpretation → Comparison / Drift → Finding → Report / Monitoring**
+**Domain → Evidence cycle → Access / Visibility / Interpretation → Comparison / Drift → Assessment → Unified Report**
 
-Account context, domain verification, role authority, entitlement, and action-specific controls govern which operations can be performed around those objects.
+Account context, role authority, entitlement and action-specific controls govern which operations can be performed around those objects.
 
 ## Documentation and runtime state
 
 Documentation defines concepts and supported product behaviour.
 
-Authenticated runtime state determines what is true for a particular account or domain now.
-
-An AI assistant should not infer current monitoring state, scan state, entitlement, verification, permission, investigation progress, queue health, Review order status, delivery status, verification-credit balance, or action success from documentation alone.
+Authenticated runtime state determines what is true for a particular account or domain now. An AI assistant should not infer current credit balance, report availability, evidence freshness, entitlement, scan state, queue state, permission or action success from documentation alone.
 
 ## Scope
 
-SemanticRisk can support communications, reputation, SEO/GEO/AEO, governance, assurance, risk, post-incident review, research, and evaluation of public-facing AI interpretation.
+SemanticRisk can support communications, reputation, SEO/GEO/AEO, governance, assurance, risk, post-incident review, research and evaluation of public-facing AI interpretation.
 
 SemanticRisk does not determine objective truth, certify safety or compliance, guarantee downstream AI output, or replace human judgement.
 
-## Public product areas
+## Historical documents
 
-SemanticRisk publicly describes applied capabilities including:
+Some older repository documents may describe retired launch-stage offers, including the former US$200 Comprehensive AI Visibility & Interpretation Review, verification scans, Monitor or Professional plans. Those are retained only as historical reference unless and until removed. They are **not current commercial offers**.
 
-- Comprehensive AI Visibility & Interpretation Review — US$200 one-time professional assessment for one company or primary domain, combining governed measurement, supporting public evidence, prioritised remediation, five governed verification scans, and a 30-minute findings call;
-- Monitoring — recurring observation of interpretation, material drift, crawl conditions, and claim change;
-- AI-assisted product interaction — explanation and selected governed actions subject to runtime permissions and controls;
-- Deep visibility investigation — governed collection of a bounded additional observation scope for eligible domains;
-- Agency pilots — small portfolio reviews for communications, SEO, digital PR, reputation, and web-strategy teams.
-
-Additional capabilities should only be added to this documentation when they are public and supportable.
+For current pricing, evidence-cycle rules and customer-facing product definition, use https://semanticrisk.io/pricing/, https://semanticrisk.io/how-it-works/ and https://semanticrisk.io/llms.txt.
 
 ## AI usage principle
 
-For questions about product meaning, use this documentation.
+For questions about current product meaning, start with the live canonical sources above and this repository's `llms.txt`.
 
 For questions about current customer state, inspect authorized runtime data.
 

@@ -1,46 +1,67 @@
 # SemanticRisk
 
-> AI interpretation assurance for public websites.
+> AI visibility and interpretation intelligence for public websites.
 
-SemanticRisk examines what AI systems understand from an organisation's public website: the claims they extract, where models disagree, what evidence may be shaping the result, and whether that interpretation changes over time.
+SemanticRisk checks whether AI systems can access and surface an organisation, what they understand from its public website, which claims and classifications they form, and what changes between comparable evidence cycles.
 
-This file is a machine-oriented entry point to the public SemanticRisk knowledge base.
+This repository is the public documentation and reference layer for SemanticRisk. The live website at https://semanticrisk.io is authoritative for current commercial terms and authenticated runtime state.
 
-## Canonical documentation
+## Current product
 
+SemanticRisk uses one six-stage public workflow:
+
+1. Access & readiness
+2. AI visibility
+3. Interpretation
+4. Drift & change
+5. Assessment & action
+6. Unified Report
+
+Any public domain can be measured without proving ownership.
+
+One SemanticRisk credit costs US$5.95. Standard packs are 1, 10, 20 and 100 credits. One credit grants a current reusable Unified Report when no more than 30 days old, or funds/joins the next shared public-domain evidence cycle when no fresh reusable report exists. An explicit early refresh consumes another credit.
+
+A fresh paid evidence cycle binds the site scan and controlled AI visibility observations to the same report cycle. Repeat completed cycles can compare interpretation score, buyer-prompt visibility, mapped entity and mapped sector state.
+
+## Canonical live sources
+
+- Website: https://semanticrisk.io/
+- Documentation: https://semanticrisk.io/docs/
+- Methodology: https://semanticrisk.io/methodology/
+- Pricing: https://semanticrisk.io/pricing/
+- How it works: https://semanticrisk.io/how-it-works/
+- Machine guide: https://semanticrisk.io/llms.txt
+- Expanded machine guide: https://semanticrisk.io/llms-full.txt
+- Canonical claims: https://semanticrisk.io/claims.json
+- Robots: https://semanticrisk.io/robots.txt
+- Sitemap: https://semanticrisk.io/sitemap.xml
+
+## Public reference documentation
+
+- Repository README: README.md
 - Documentation index: docs/index.md
 - What SemanticRisk is: docs/concepts/what-is-semanticrisk.md
 - Evidence, claims and interpretation: docs/concepts/evidence-claims-interpretation.md
-- AI visibility vs interpretation assurance: docs/concepts/visibility-vs-interpretation.md
+- AI visibility vs interpretation: docs/concepts/visibility-vs-interpretation.md
 - Interpretation drift: docs/concepts/interpretation-drift.md
 - Methodology overview: docs/methodology/overview.md
-
-## Product model
-
-- SemanticRisk object model: docs/product/object-model.md
+- Object model: docs/product/object-model.md
 - Scans and reports: docs/product/scans-and-reports.md
-- Comprehensive AI Visibility & Interpretation Review: docs/product/comprehensive-review.md
-- Monitoring: docs/product/monitoring.md
-- Deep visibility investigations: docs/product/deep-investigations.md
-- Governed actions: docs/product/governed-actions.md
 - AI assistant boundaries: docs/product/assistant-boundaries.md
-
-## AI retrieval guidance
-
-- Retrieval and source-priority rules: docs/ai/retrieval-guidance.md
+- AI retrieval guidance: docs/ai/retrieval-guidance.md
 
 ## Important usage rules
 
 Documentation defines product concepts and supported behaviour. It does not establish the current state of a customer's account or domain.
 
-For current account, domain, monitoring, scan, report, Review order, Review delivery, verification-credit, entitlement, verification, permission, investigation, queue, or action state, use an authorized SemanticRisk runtime interface when available.
+For current account, credit, domain, scan, report, entitlement, freshness, permission, queue or action state, use an authorized SemanticRisk runtime interface when available.
 
-Do not invent undocumented SemanticRisk capabilities, API endpoints, action permissions, plan entitlements, billing effects, security guarantees, model coverage, verification balances, delivery states, or successful execution states.
+Do not invent undocumented capabilities, API endpoints, entitlements, billing effects, security guarantees, model coverage or successful execution states.
 
-A SemanticRisk claim records what an AI model appeared to understand or assert from available evidence. It is not automatically an established fact, certification, endorsement, or legal finding.
+A SemanticRisk claim records what an AI model appeared to understand or assert from available evidence. It is not automatically an established fact, certification, endorsement or legal finding.
 
-Natural-language intent does not bypass product controls. State-changing actions remain subject to authentication, authority, entitlement, verification, approval, freshness, and action-specific runtime checks.
+Natural-language intent does not bypass product controls. State-changing actions remain subject to authentication, authority, entitlement, freshness and action-specific runtime checks.
 
-## Public site
+## Historical material
 
-https://semanticrisk.io
+Older documents may describe retired launch-stage products or pricing. Those documents are historical only when they conflict with the current product definition above or the live SemanticRisk website. Current live commercial terms at https://semanticrisk.io/pricing/ take precedence.
