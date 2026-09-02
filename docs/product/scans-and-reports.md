@@ -1,6 +1,6 @@
 # Scans and Reports
 
-This page defines the public reasoning relationship between SemanticRisk scans, observations, findings, and reports.
+This page defines the public reasoning relationship between SemanticRisk scans, evidence cycles, observations, findings, and reports.
 
 ## Scan
 
@@ -10,25 +10,53 @@ A scan can capture website evidence, access conditions, model observations, clai
 
 A scan observes the target. It does not modify the target website.
 
-## Scan state
+## Credit-funded full evidence cycle
+
+A fresh credit-funded Unified Report is produced from a coordinated evidence cycle rather than from a website crawl alone.
+
+The current full cycle requires:
+
+1. a fresh domain and interpretation scan; and
+2. Buyer Visibility Core v1: six controlled buyer-intent prompts, two model lanes, and two repetitions, for 24 controlled AI visibility observations.
+
+The Unified Report is materialized only after the required scan and visibility evidence have completed successfully.
+
+A compatible recent cycle may be joined or recovered rather than duplicated. If an account has already funded the same generating report cycle, continuing or repairing that cycle does not consume another credit merely because processing was interrupted or temporarily throttled.
+
+Older paid cycles that had completed the domain scan but had not yet obtained the required visibility evidence may be completed in place using the credit already spent.
+
+A completed full-cycle report snapshot is treated as immutable evidence. Polling or reconciliation must not silently replace its completed visibility run or extend its freshness window.
+
+## Provider delays and failure
+
+Upstream model-provider throttling can delay individual observations. Recoverable provider throttling is retried automatically and should be presented as processing state rather than as evidence that the customer needs to purchase another cycle.
+
+Where a paid evidence cycle reaches a terminal failure and cannot produce the funded report, the consumed credit is returned automatically. A SemanticRisk-side provider failure must not be converted into a second customer charge.
+
+Exact provider limits, retry timing, queue position, and completion time are runtime/operational state and must not be inferred from this documentation.
+
+## Scan and cycle state
 
 Scans and report generation can be asynchronous work.
 
-The product may show work as queued, running, completed, or failed. The exact runtime state should be read from the product rather than guessed from elapsed time or from the existence of a request.
+The product may show work as queued, running, partial/recovering, completed, or failed. The exact runtime state should be read from the product rather than guessed from elapsed time or from the existence of a request.
 
 An AI assistant should distinguish:
 
 - **requested** — a user or system asked for work;
 - **queued** — the work has been accepted but not completed;
-- **running** — the work is actively being processed;
+- **running** — work is actively being processed;
+- **partial/recovering** — some required evidence exists and eligible remaining work is being recovered or retried;
 - **completed** — the governed product path reports completion;
 - **failed** — the product reports that work did not complete successfully.
 
-The assistant must not treat "requested" or "queued" as equivalent to "completed".
+The assistant must not treat requested, queued, or partial work as equivalent to completed evidence.
+
+When available, progress such as completed visibility observations should be read from runtime state. It is safe to tell a user that an asynchronous cycle continues after they leave the workspace, but an AI should not invent an ETA.
 
 ## Observation
 
-A completed scan can produce one or more observations.
+A completed scan or evidence cycle can produce one or more observations.
 
 Observations are the underlying recorded results used for later comparison. They should be preferred over report prose when an AI needs to explain the precise source of a finding.
 
@@ -59,9 +87,9 @@ A good finding should preserve enough context to answer:
 - whether the likely driver is known or uncertain;
 - why the difference may matter.
 
-## Report
+## Unified Report
 
-A report is a user-facing synthesis of the available evidence, observations, comparisons, findings, and recommendations.
+The Unified Report is the customer-facing synthesis of the evidence cycle: available website evidence, visibility observations, comparisons, findings, and recommendations.
 
 A report can be useful for communication and decision-making, but it is downstream of the underlying evidence.
 
@@ -69,18 +97,21 @@ When an AI assistant has access to structured evidence and a report, it should n
 
 ## Regeneration and freshness
 
-A newly requested scan or report does not make older output invalid immediately. Until new work completes, the most recent completed observation or report remains the latest completed record.
+A newly requested evidence cycle does not make older completed output invalid immediately. Until new work completes, the most recent completed observation or report remains the latest completed record.
 
 The assistant should make freshness explicit when it matters, for example:
 
-- latest completed scan;
-- scan currently running;
+- latest completed evidence;
+- fresh evidence cycle currently running;
+- 18 of 24 controlled visibility observations complete, when runtime state actually reports that value;
 - report generated from a specified observation period.
 
 ## AI assistant rule
 
-When answering "What happened?", prefer this order:
+When answering “What happened?”, prefer this order:
 
 **runtime state → observation → evidence → comparison → finding → report summary**
 
-This reduces the chance of explaining a summarized report as though it were direct source evidence.
+When answering “Do I need to pay again?”, prefer authenticated credit/grant/report runtime state over documentation. A recoverable or already-funded cycle must not be described as requiring another credit unless the current product state explicitly says so.
+
+This reduces the chance of explaining a summarized report as though it were direct source evidence or turning an operational retry into an unnecessary customer purchase.
