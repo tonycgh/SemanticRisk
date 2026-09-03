@@ -14,12 +14,18 @@ It is not a production deployment log and does not include private implementatio
 - AI-assistant behavioural and retrieval boundaries.
 - Machine-oriented `llms.txt` discovery entry point.
 - Documentation maintenance contract requiring regular review against active product development.
-- Comprehensive AI Visibility & Interpretation Review contract, including current US$200 one-time pricing, five governed verification scans, human-gated launch fulfillment, evidence-coverage boundaries, and optional continuation into recurring monitoring.
+- Measurement-context and readiness contract for workspace domains, including free pre-scan readiness/discovery checks, versioned confirmed measurement profiles, comparison-domain portfolios, and machine-file validation boundaries.
 
 ### Changed
 
-- Public product index now reflects the Comprehensive AI Visibility & Interpretation Review rather than the earlier generic AI Interpretation Review description.
-- Runtime-state guidance now explicitly includes Review order status, delivery status, and verification-credit balance.
+- Scans and reports documentation now preserves measurement-profile versioning across 24-observation visibility cycles and clarifies that competitors are separate measured domains with separate credit-funded reports.
+- AI runtime-state guidance now includes readiness result, measurement-profile version, portfolio membership, and repeat-measurement preference.
+- Repeat cadence guidance is documented as a preference/recommendation only; it does not by itself enable recurring scans, automatic credit spend, or recurring billing.
+- The former US$200 Comprehensive AI Visibility & Interpretation Review is historical and is not a current commercial offer. Current pricing and credit rules are governed by the live SemanticRisk product sources.
+
+### Historical note
+
+Earlier changelog entries described the US$200 Comprehensive Review as current at the time it was introduced. That offer has since been retired. Historical documentation may remain for provenance but must not override current pricing or product definitions.
 
 ### Maintenance policy
 
