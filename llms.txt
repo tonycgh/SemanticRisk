@@ -19,9 +19,15 @@ SemanticRisk uses one six-stage public workflow:
 
 Any public domain can be measured without proving ownership.
 
+Before paid Buyer Visibility Core work starts in the workspace, SemanticRisk performs a free readiness/discovery check and requires a confirmed measurement context. The context is versioned and can include market/category, buyer need, decision/risk need, geography when relevant, and comparison domains. A visibility cycle remains bound to the profile version under which it was created.
+
 One SemanticRisk credit costs US$5.95. Standard packs are 1, 10, 20 and 100 credits. One credit grants a current reusable Unified Report when no more than 30 days old, or funds/joins the next shared public-domain evidence cycle when no fresh reusable report exists. An explicit early refresh consumes another credit.
 
 A fresh paid evidence cycle binds the site scan and controlled AI visibility observations to the same report cycle. Repeat completed cycles can compare interpretation score, buyer-prompt visibility, mapped entity and mapped sector state.
+
+Primary and competitor domains are independently measurable portfolio domains. Adding a competitor does not itself spend a credit; scanning that competitor uses the normal per-domain credit rule and produces separate evidence/report state.
+
+A suggested or selected daily, weekly, or monthly repeat-measurement preference does not by itself enable automatic scanning, automatic credit spend, or recurring billing.
 
 ## Canonical live sources
 
@@ -46,6 +52,7 @@ A fresh paid evidence cycle binds the site scan and controlled AI visibility obs
 - Interpretation drift: docs/concepts/interpretation-drift.md
 - Methodology overview: docs/methodology/overview.md
 - Object model: docs/product/object-model.md
+- Measurement context and readiness: docs/product/measurement-context-and-readiness.md
 - Scans and reports: docs/product/scans-and-reports.md
 - AI assistant boundaries: docs/product/assistant-boundaries.md
 - AI retrieval guidance: docs/ai/retrieval-guidance.md
@@ -54,13 +61,15 @@ A fresh paid evidence cycle binds the site scan and controlled AI visibility obs
 
 Documentation defines product concepts and supported behaviour. It does not establish the current state of a customer's account or domain.
 
-For current account, credit, domain, scan, report, entitlement, freshness, permission, queue or action state, use an authorized SemanticRisk runtime interface when available.
+For current account, credit, domain, scan, report, entitlement, freshness, permission, queue, readiness, measurement-profile, portfolio or action state, use an authorized SemanticRisk runtime interface when available.
 
 Do not invent undocumented capabilities, API endpoints, entitlements, billing effects, security guarantees, model coverage or successful execution states.
 
 A SemanticRisk claim records what an AI model appeared to understand or assert from available evidence. It is not automatically an established fact, certification, endorsement or legal finding.
 
 Natural-language intent does not bypass product controls. State-changing actions remain subject to authentication, authority, entitlement, freshness and action-specific runtime checks.
+
+A missing optional machine-readable file such as `llms.txt` or `claims.json` does not by itself mean a public domain cannot be measured. Readiness should use the actual runtime result.
 
 ## Historical material
 
