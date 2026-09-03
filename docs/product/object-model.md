@@ -8,9 +8,29 @@ It is a product knowledge model, not a database schema and not an API specificat
 
 A **domain** is the website property SemanticRisk evaluates.
 
-A domain can have evidence, scans, observations, claims, reports, monitoring state, and account permissions associated with it.
+A domain can have evidence, scans, observations, claims, reports, readiness state, measurement context, monitoring state, and account permissions associated with it.
 
-A domain must not be treated as owned or controllable merely because it is publicly reachable. Product actions may require verification and account authority.
+A domain must not be treated as owned or controllable merely because it is publicly reachable. Product actions may require account authority even when measurement itself does not require ownership proof.
+
+## Readiness
+
+**Readiness** is the pre-scan assessment of whether SemanticRisk can reach usable public evidence for a domain and what public discovery resources are available.
+
+Readiness can include access/crawl observations and machine-readable file discovery. It is separate from the paid evidence cycle.
+
+## Measurement profile
+
+A **measurement profile** is the confirmed context used to frame controlled AI visibility observations for a domain.
+
+It can describe the market/category, buyer need, decision/risk need, geography when relevant, and comparison context.
+
+Measurement profiles are versioned so earlier evidence retains the context under which it was collected. A new profile version must not silently rewrite an older visibility cycle.
+
+## Portfolio / comparison domain
+
+A **portfolio** is the customer's ordered set of measurable domains in the workspace.
+
+One domain can be treated as the primary domain and others as comparison or competitor domains. Comparison domains remain independent measurable domains with their own evidence and report state.
 
 ## Evidence
 
@@ -60,6 +80,8 @@ Monitoring creates the repeated evidence needed to identify changes rather than 
 
 Monitoring state can include whether recurring monitoring is enabled and the cadence at which it is configured to run.
 
+A cadence preference or recommendation must not be treated as proof that recurring scans, automatic credit spend, or recurring billing are enabled.
+
 ## Report
 
 A **report** is a user-facing synthesis of SemanticRisk evidence, observations, comparisons, findings, and recommendations.
@@ -78,12 +100,12 @@ An **account** represents the authenticated user or organisation context from wh
 
 An **entitlement** determines whether a product capability is available to that account or domain.
 
-Documentation may explain a capability, but documentation alone does not grant permission to execute it. Runtime authentication, domain authority, plan entitlement, verification state, and action-specific controls remain authoritative.
+Documentation may explain a capability, but documentation alone does not grant permission to execute it. Runtime authentication, domain authority, credit/entitlement state, and action-specific controls remain authoritative.
 
 ## Relationship summary
 
 A useful reasoning chain is:
 
-**Domain → Evidence → Scan → Observation → Claim / Interpretation → Comparison / Drift → Finding → Report / Monitoring**
+**Domain → Readiness → Measurement profile → Evidence cycle → Observation → Claim / Interpretation → Comparison / Drift → Finding → Report / Monitoring**
 
-Account, verification, role authority, and entitlement govern which actions can be performed around those objects.
+Portfolio relationships connect independently measured domains for comparison. Account, role authority, credit/entitlement state, and action-specific controls govern which operations can be performed around those objects.
