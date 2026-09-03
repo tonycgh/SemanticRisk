@@ -10,6 +10,18 @@ A scan can capture website evidence, access conditions, model observations, clai
 
 A scan observes the target. It does not modify the target website.
 
+## Pre-scan readiness and measurement context
+
+Before paid Buyer Visibility Core work starts in the workspace, SemanticRisk separates free readiness/discovery from the paid evidence cycle.
+
+The readiness step checks whether usable public content can be measured and inspects common machine-readable discovery resources. It does not consume a paid scan credit merely because it performs that preflight.
+
+The customer also confirms a versioned measurement context describing the market/category, buyer need, decision/risk need, geography when relevant, and comparison set. The controlled visibility cycle is bound to the confirmed profile version used when the cycle begins.
+
+A later context edit must not silently change the meaning of an earlier cycle. Earlier evidence remains associated with its original profile version.
+
+See [Measurement context and readiness](measurement-context-and-readiness.md).
+
 ## Credit-funded full evidence cycle
 
 A fresh credit-funded Unified Report is produced from a coordinated evidence cycle rather than from a website crawl alone.
@@ -21,11 +33,19 @@ The current full cycle requires:
 
 The Unified Report is materialized only after the required scan and visibility evidence have completed successfully.
 
-A compatible recent cycle may be joined or recovered rather than duplicated. If an account has already funded the same generating report cycle, continuing or repairing that cycle does not consume another credit merely because processing was interrupted or temporarily throttled.
+A compatible recent cycle may be joined or recovered rather than duplicated. Compatibility includes the measurement-profile version used for the controlled visibility work. If an account has already funded the same generating report cycle, continuing or repairing that cycle does not consume another credit merely because processing was interrupted or temporarily throttled.
 
 Older paid cycles that had completed the domain scan but had not yet obtained the required visibility evidence may be completed in place using the credit already spent.
 
 A completed full-cycle report snapshot is treated as immutable evidence. Polling or reconciliation must not silently replace its completed visibility run or extend its freshness window.
+
+## Multiple domains and competitors
+
+The primary site and comparison/competitor sites are separate measurable domains.
+
+Adding a competitor to a workspace portfolio does not itself spend a credit. If the customer chooses to run a paid evidence cycle for that competitor, the normal per-domain credit rule applies and the competitor receives its own evidence and Unified Report.
+
+Comparative report views may use evidence from multiple measured domains, but one domain's paid cycle should not be described as automatically funding another domain's scan.
 
 ## Provider delays and failure
 
@@ -75,6 +95,8 @@ A comparison can surface:
 
 A difference should not automatically be presented as harmful or as proof that the website changed.
 
+Comparisons across evidence cycles should preserve the measurement context/profile version used by each cycle. If the market or buyer context changed between cycles, that context change is relevant to interpretation and should not be hidden.
+
 ## Finding
 
 A finding is a reviewable result derived from evidence and comparison.
@@ -95,6 +117,8 @@ A report can be useful for communication and decision-making, but it is downstre
 
 When an AI assistant has access to structured evidence and a report, it should not invent precision that exists in neither source. If a report summarizes a change but the underlying evidence does not establish the cause, the assistant should describe the cause as uncertain.
 
+A report may also provide comparison and next-step guidance. Recommendations for repeat measurement are guidance, not proof that automated recurrence, credit spend, or recurring billing is enabled.
+
 ## Regeneration and freshness
 
 A newly requested evidence cycle does not make older completed output invalid immediately. Until new work completes, the most recent completed observation or report remains the latest completed record.
@@ -113,5 +137,7 @@ When answering “What happened?”, prefer this order:
 **runtime state → observation → evidence → comparison → finding → report summary**
 
 When answering “Do I need to pay again?”, prefer authenticated credit/grant/report runtime state over documentation. A recoverable or already-funded cycle must not be described as requiring another credit unless the current product state explicitly says so.
+
+When explaining a visibility result, include the confirmed measurement context when it materially affects what was measured, and do not silently compare cycles bound to different context versions as though their setup were identical.
 
 This reduces the chance of explaining a summarized report as though it were direct source evidence or turning an operational retry into an unnecessary customer purchase.

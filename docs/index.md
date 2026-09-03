@@ -30,6 +30,8 @@ SemanticRisk uses one six-stage public workflow:
 5. **Assessment & action** — what is material, unusual or worth addressing?
 6. **Unified Report** — preserve the supporting evidence, findings, priorities and printable/PDF view for the evidence cycle.
 
+Before paid Buyer Visibility Core work starts in the workspace, SemanticRisk performs a free readiness/discovery check and requires a confirmed, versioned measurement context. This preserves what market and buyer context each controlled visibility cycle was designed to measure.
+
 Any public domain can be measured without proving ownership. One SemanticRisk credit costs **US$5.95**. Standard packs are **1, 10, 20 and 100 credits**. One credit grants a current reusable Unified Report when no more than 30 days old, or funds/joins the next shared public-domain evidence cycle when no fresh reusable report exists. An explicit early refresh consumes another credit.
 
 ## Start here
@@ -45,6 +47,7 @@ Any public domain can be measured without proving ownership. One SemanticRisk cr
 ### Product model
 
 - [SemanticRisk object model](product/object-model.md)
+- [Measurement context and readiness](product/measurement-context-and-readiness.md)
 - [Scans and reports](product/scans-and-reports.md)
 - [AI assistant boundaries](product/assistant-boundaries.md)
 
@@ -62,15 +65,15 @@ SemanticRisk also asks what AI systems understood from the organisation's public
 
 A useful public object relationship is:
 
-**Domain → Evidence cycle → Access / Visibility / Interpretation → Comparison / Drift → Assessment → Unified Report**
+**Domain → Readiness → Measurement context → Evidence cycle → Access / Visibility / Interpretation → Comparison / Drift → Assessment → Unified Report**
 
-Account context, role authority, entitlement and action-specific controls govern which operations can be performed around those objects.
+Portfolio relationships connect independently measured primary and comparison domains. Account context, role authority, credit/entitlement state and action-specific controls govern which operations can be performed around those objects.
 
 ## Documentation and runtime state
 
 Documentation defines concepts and supported product behaviour.
 
-Authenticated runtime state determines what is true for a particular account or domain now. An AI assistant should not infer current credit balance, report availability, evidence freshness, entitlement, scan state, queue state, permission or action success from documentation alone.
+Authenticated runtime state determines what is true for a particular account or domain now. An AI assistant should not infer current credit balance, report availability, evidence freshness, entitlement, scan state, queue state, readiness result, measurement-profile version, portfolio membership, permission or action success from documentation alone.
 
 ## Scope
 
