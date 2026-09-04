@@ -8,26 +8,30 @@ This repository is the public documentation and reference layer for SemanticRisk
 
 ## Current product
 
-SemanticRisk uses one six-stage public workflow:
+SemanticRisk uses one six-stage public workspace workflow:
 
 1. Access & readiness
 2. AI visibility
 3. Interpretation
 4. Drift & change
-5. Assessment & action
-6. Unified Report
+5. Assessment + Unified Report
+6. Schedule / repeat measurement
 
 Any public domain can be measured without proving ownership.
 
 Before paid Buyer Visibility Core work starts in the workspace, SemanticRisk performs a free readiness/discovery check and requires a confirmed measurement context. The context is versioned and can include market/category, buyer need, decision/risk need, geography when relevant, and comparison domains. A visibility cycle remains bound to the profile version under which it was created.
 
+After evidence exists, **Re-check live · No credit** performs fresh discovery and can compare current helper-file, sitemap, discovered-URL and eligible-page state against the evidence behind the current full report. The re-check itself does not consume a credit or automatically start a paid cycle. A material change can support a recommendation for a new 1-credit full evidence cycle.
+
 One SemanticRisk credit costs US$5.95. Standard packs are 1, 10, 20 and 100 credits. One credit grants a current reusable Unified Report when no more than 30 days old, or funds/joins the next shared public-domain evidence cycle when no fresh reusable report exists. An explicit early refresh consumes another credit.
 
-A fresh paid evidence cycle binds the site scan and controlled AI visibility observations to the same report cycle. Repeat completed cycles can compare interpretation score, buyer-prompt visibility, mapped entity and mapped sector state.
+A fresh paid evidence cycle binds the site scan and controlled AI visibility observations to the same report cycle. Repeat completed cycles can compare interpretation, buyer-prompt visibility and other compatible evidence without rewriting earlier completed evidence.
+
+The completed Unified Report is a frozen evidence artifact for its cycle. Depending on available evidence it can include a page-1 executive summary, readiness and machine-file evidence, website semantic coverage, recurring claims and tensions, controlled buyer-intent visibility, provider/model-lane coverage, competitor displacement, citation hosts, drift/change evidence, an evidence-linked remediation plan, history context, and appendices containing prompts, observation ledgers, site inventory, methodology and provenance. Missing evidence should be stated rather than invented.
 
 Primary and competitor domains are independently measurable portfolio domains. Adding a competitor does not itself spend a credit; scanning that competitor uses the normal per-domain credit rule and produces separate evidence/report state.
 
-A suggested or selected daily, weekly, or monthly repeat-measurement preference does not by itself enable automatic scanning, automatic credit spend, or recurring billing.
+Weekly repeat measurement is currently recommended initially to establish a comparison baseline. Daily / Weekly / Monthly cadence controls may be available, but a cadence recommendation or preference does not by itself enable automatic scanning, automatic credit spend, or recurring billing.
 
 ## Canonical live sources
 
@@ -54,6 +58,7 @@ A suggested or selected daily, weekly, or monthly repeat-measurement preference 
 - Object model: docs/product/object-model.md
 - Measurement context and readiness: docs/product/measurement-context-and-readiness.md
 - Scans and reports: docs/product/scans-and-reports.md
+- Unified Report: docs/product/unified-report.md
 - AI assistant boundaries: docs/product/assistant-boundaries.md
 - AI retrieval guidance: docs/ai/retrieval-guidance.md
 
@@ -61,7 +66,7 @@ A suggested or selected daily, weekly, or monthly repeat-measurement preference 
 
 Documentation defines product concepts and supported behaviour. It does not establish the current state of a customer's account or domain.
 
-For current account, credit, domain, scan, report, entitlement, freshness, permission, queue, readiness, measurement-profile, portfolio or action state, use an authorized SemanticRisk runtime interface when available.
+For current account, credit, domain, scan, report, entitlement, freshness, permission, queue, readiness, live re-check, measurement-profile, portfolio, cadence-execution or action state, use an authorized SemanticRisk runtime interface when available.
 
 Do not invent undocumented capabilities, API endpoints, entitlements, billing effects, security guarantees, model coverage or successful execution states.
 

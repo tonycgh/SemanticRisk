@@ -16,7 +16,7 @@ This repository is the **public documentation and reference layer for SemanticRi
 
 It exists so people, AI systems, agencies, researchers, and developers can reference the same product definitions, measurement boundaries, object model, methodology, and assistant rules used by SemanticRisk.
 
-Where documentation and authenticated runtime state differ, **current runtime state is authoritative** for account balances, credits, report availability, evidence freshness, entitlements, promotional offers, and work in progress.
+Where documentation and authenticated runtime state differ, **current runtime state is authoritative** for account balances, credits, report availability, evidence freshness, entitlements, work in progress, live re-check state, and action success.
 
 ---
 
@@ -35,18 +35,68 @@ SemanticRisk therefore separates several questions that are often collapsed into
 
 ---
 
-## Public measurement sequence
+## Public workspace sequence
 
-SemanticRisk uses one public six-stage sequence across the product and documentation:
+SemanticRisk uses one public six-stage sequence across the current product and documentation:
 
 1. **Access & readiness** — can the relevant public website evidence be reached and discovered?
 2. **AI visibility** — does the organisation appear in controlled buyer-prompt observations?
 3. **Interpretation** — what claims, categories, and descriptions are formed from the available evidence?
 4. **Drift & change** — what changed between comparable evidence cycles?
-5. **Assessment & action** — what is material, unusual, or worth addressing?
-6. **Unified Report & monitoring** — preserve the evidence, findings, priorities, and printable/PDF view for the evidence cycle.
+5. **Assessment + Unified Report** — what is material, unusual or worth addressing, and what completed evidence artifact preserves the result?
+6. **Schedule / repeat measurement** — review repeat-measurement cadence; weekly is currently recommended initially to establish a comparison baseline.
 
-Internal documentation may describe lower-level operations such as capture, extraction, normalization, comparison, and review. Those are implementation activities that map into the six public stages above rather than separate customer-facing product models.
+Internal documentation may describe lower-level operations such as capture, extraction, normalization, comparison, and review. Those are implementation activities that map into the six public stages rather than separate customer-facing product models.
+
+---
+
+## Current applied product
+
+The current commercial product is one operational workspace with one customer-facing **Unified Report** per completed evidence cycle.
+
+- Any public domain can be checked without proving ownership.
+- One SemanticRisk credit costs **US$5.95**.
+- Standard credit packs are **1, 10, 20, and 100 credits**.
+- A credit grants the current reusable Unified Report when that report is no more than 30 days old.
+- If no fresh reusable report exists, one credit funds or joins the next shared public-domain evidence cycle.
+- An explicit early refresh consumes another credit.
+- Reusable public-domain evidence may be shared across entitled customers only when it is explicitly safe for reuse.
+- Customer-private inputs are not exposed across customers.
+
+Before paid Buyer Visibility Core work starts, SemanticRisk performs a free readiness/discovery check and uses a confirmed, versioned measurement context so the market and buyer framing of each visibility cycle is preserved.
+
+After evidence exists, **Re-check live · No credit** can perform fresh public discovery and compare current helper-file, sitemap and URL-inventory state against the evidence behind the current report. A material change can justify a recommendation for another full evidence cycle, but the free re-check does not spend a credit or automatically start paid work.
+
+Commercial and authenticated runtime details are authoritative at [semanticrisk.io](https://semanticrisk.io).
+
+---
+
+## What the Unified Report can contain
+
+The Unified Report is a frozen evidence artifact for its completed cycle rather than a transient dashboard summary.
+
+Depending on available evidence, it can include:
+
+- a page-1 executive summary;
+- access, discovery and readiness evidence;
+- robots.txt, sitemap and machine-readable helper-file evidence;
+- website semantic coverage and captured page evidence;
+- core versus supporting evidence and recurring extracted claims;
+- tensions, contradictions, omissions, narrowing, overstatement or abstention where supported;
+- controlled buyer-prompt AI visibility evidence;
+- provider/model-lane coverage and repeatability;
+- competitor or alternative-provider displacement;
+- citation and source-provenance evidence;
+- drift and change findings from comparable cycles;
+- evidence-linked remediation using **Observe → Explain → Change → Re-measure → Verify**;
+- portfolio/history context where available;
+- appendices for prompts, observation ledgers, site inventory, methodology and provenance.
+
+Missing evidence should be stated rather than invented. Diagnostic counts are not market share, and machine-readable helper files are not ranking or visibility guarantees.
+
+The report can be reviewed inside the workspace and printed/saved as PDF from the same completed report artifact.
+
+See [Unified Report](docs/product/unified-report.md).
 
 ---
 
@@ -60,56 +110,6 @@ Internal documentation may describe lower-level operations such as capture, extr
 | Can be influenced by access, relevance, competition, and source selection | Is traced back to public wording, structure, capture conditions, and model output |
 
 SemanticRisk combines these views rather than treating them as competing product categories.
-
----
-
-## Current applied product
-
-The current commercial product is one operational workspace with one customer-facing **Unified Report** per evidence cycle.
-
-- Any public domain can be checked without proving ownership.
-- One SemanticRisk credit costs **US$5.95**.
-- Standard credit packs are **1, 10, 20, and 100 credits**.
-- A credit grants the current reusable Unified Report when that report is no more than 30 days old.
-- If no fresh reusable report exists, one credit funds or joins the next shared public-domain evidence cycle.
-- An explicit early refresh consumes another credit.
-- Reusable public-domain evidence may be shared across entitled customers only when it is explicitly safe for reuse.
-- Customer-private inputs are not exposed across customers.
-
-Commercial and authenticated runtime details are authoritative at [semanticrisk.io](https://semanticrisk.io).
-
----
-
-## What the Unified Report can contain
-
-Depending on the available evidence for the domain and cycle, the Unified Report can include:
-
-- access and crawl-readiness findings;
-- robots.txt, sitemap, and discoverability observations;
-- controlled buyer-prompt AI visibility evidence;
-- citation and source-provenance evidence;
-- AI interpretation and extracted-claim analysis;
-- model disagreement or inconsistency evidence where measured;
-- drift and change findings from comparable cycles;
-- ranked evidence-backed next actions;
-- a printable/PDF rendering of the same report.
-
-The report is a diagnostic artifact, not a guarantee of future model behaviour, recommendation placement, search ranking, or downstream AI output.
-
----
-
-## Public evidence
-
-The public SemanticRisk site includes:
-
-- a company and sector benchmark;
-- the semanticrisk.io live specimen;
-- public methodology and documentation;
-- selected evidence and findings;
-- a sample Unified Report;
-- AI-readable discovery material such as `llms.txt` and `claims.json`.
-
-The production platform and private implementation are maintained separately from this public reference repository.
 
 ---
 
@@ -130,28 +130,9 @@ Its purpose is evidence-led measurement and interpretation intelligence.
 
 ## Intended uses
 
-SemanticRisk is relevant to:
-
-- communications and reputation teams;
-- SEO, GEO, AEO, and web-strategy agencies;
-- marketing and brand teams;
-- governance, assurance, and risk functions;
-- evaluation of AI assistants and public-facing AI output;
-- post-incident analysis;
-- research, education, and policy discussion.
+SemanticRisk is relevant to communications and reputation teams; SEO, GEO, AEO and web-strategy agencies; marketing and brand teams; governance, assurance and risk functions; evaluation of AI assistants and public-facing AI output; post-incident analysis; and research or education.
 
 It is especially useful where AI-generated descriptions may influence customers, procurement teams, investors, regulators, partners, or the public.
-
----
-
-## How to reference SemanticRisk
-
-Suggested citation:
-
-> **SemanticRisk — AI visibility and interpretation intelligence for public websites**  
-> https://semanticrisk.io
-
-This public reference evolves alongside the product. Material changes should be dated in the repository changelog.
 
 ---
 
