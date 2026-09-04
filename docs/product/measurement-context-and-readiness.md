@@ -1,15 +1,16 @@
 # Measurement Context and Readiness
 
-This page defines the customer-facing setup that precedes paid SemanticRisk visibility measurement.
+This page defines the customer-facing setup that precedes paid SemanticRisk visibility measurement and the free live re-check used after evidence exists.
 
 ## Purpose
 
 SemanticRisk should not spend a credit on controlled AI visibility work until the domain has a usable public measurement path and the intended market context has been confirmed.
 
-The setup separates two questions:
+The setup separates three questions:
 
 1. **Can this public domain be measured?**
 2. **What market and buyer context should the controlled visibility observations represent?**
+3. **Has the public discovery environment materially changed since the evidence behind the current report?**
 
 ## Free readiness check
 
@@ -27,6 +28,32 @@ The readiness check can inspect whether usable public content is reachable and w
 A missing `llms.txt`, `claims.json`, or similar optional machine-readable file does **not** by itself make a domain unscannable.
 
 The readiness check does not consume a paid scan credit merely because it is checking access or discovery files.
+
+## Live re-check
+
+After evidence exists, the workspace can perform a fresh **Re-check live · No credit** discovery pass.
+
+The live re-check performs current public discovery again and can compare live state with the evidence baseline behind the current report. Relevant comparison signals can include:
+
+- helper-file presence, status, or size;
+- sitemap sources and sitemap inventory;
+- discovered URL counts;
+- eligible-page counts;
+- measurability or access state.
+
+When a completed report has full site evidence, that report evidence is the meaningful comparison baseline. Repeated free readiness checks should not erase that baseline merely because they are newer lightweight checks.
+
+If no completed full-report/site evidence exists, the product may fall back to the best available prior readiness evidence for comparison.
+
+A material live change can justify a recommendation for a fresh full evidence cycle. The live re-check itself does **not** spend a credit and does not automatically start the paid cycle. The customer must still explicitly choose the next 1-credit evidence cycle when one is required.
+
+This distinction is important: a drop from a previously large discovered or eligible page set to a much smaller current inventory is a change-detection signal, not proof of cause. The new paid cycle is what gathers the broader evidence needed to assess impact.
+
+## Last full site evidence
+
+The workspace may show deeper counts from the most recent full evidence cycle, such as eligible pages, selected/captured pages, claims, captured text, or review flags.
+
+These deeper counts should be described as **Last full site evidence** when they come from an older completed cycle. They are not automatically the same thing as the current lightweight live discovery pass.
 
 ## Machine-file validation
 
@@ -69,15 +96,18 @@ The product may recommend adding multiple competitors to improve comparative use
 
 ## Repeat-measurement preference
 
-After a report, SemanticRisk may suggest a daily, weekly, or monthly repeat-measurement cadence based on the evidence or customer goal.
+After a report, SemanticRisk currently recommends **weekly** repeat measurement initially to establish a comparison baseline, while the workspace retains Daily / Weekly / Monthly cadence controls.
 
-Selecting a cadence preference does not by itself spend credits or enable recurring billing. Current execution, billing, automation, and credit state must be read from runtime product state.
+A cadence selection or recommendation does not by itself spend credits or enable recurring billing. Each paid repeat evidence cycle uses the applicable credit when it actually runs. Current execution, billing, automation, and credit state must be read from runtime product state.
 
 ## AI assistant rules
 
 An AI assistant should:
 
-- distinguish free readiness/discovery checks from paid evidence cycles;
+- distinguish free readiness/discovery and live re-checks from paid evidence cycles;
+- explain that a material live discovery change can justify a fresh evidence-cycle recommendation without implying that the free re-check spent a credit;
+- prefer the evidence behind the current full report as the comparison baseline when it exists;
+- distinguish current live discovery counts from older **Last full site evidence** counts;
 - use the confirmed measurement profile when explaining what a visibility cycle was designed to measure;
 - preserve profile-version boundaries when comparing cycles;
 - avoid claiming that missing optional machine-readable files make a site unscannable;
