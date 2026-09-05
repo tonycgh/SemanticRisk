@@ -24,20 +24,37 @@ See [Measurement context and readiness](measurement-context-and-readiness.md).
 
 ## Credit-funded full evidence cycle
 
-A fresh credit-funded Unified Report is produced from a coordinated evidence cycle rather than from a website crawl alone.
+A fresh credit-funded Unified Report is produced from one coherent evidence cycle rather than from independently selected recent artifacts.
 
-The current full cycle requires:
+For a new paid cycle, SemanticRisk performs fresh public discovery before the credit-funded work is committed, creates a cycle-bound site-evidence audit, selects a representative page set, and gathers that site evidence first. The cycle then proceeds to the controlled AI measurement and interpretation work needed for the report.
 
-1. a fresh domain and interpretation scan; and
-2. Buyer Visibility Core v1: six controlled buyer-intent prompts, two model lanes, and two repetitions, for 24 controlled AI visibility observations.
+The current full cycle includes:
 
-The Unified Report is materialized only after the required scan and visibility evidence have completed successfully.
+1. fresh site discovery and a cycle-bound representative website-evidence set;
+2. Buyer Visibility Core v1: six controlled buyer-intent prompts, two model lanes, and two repetitions, for 24 controlled AI visibility observations; and
+3. interpretation/scan evidence bound to that same report cycle.
+
+The Unified Report is materialized only after the required evidence for the bound cycle has completed successfully. A new cycle must not silently reuse an older site-audit snapshot merely because newer visibility or interpretation evidence exists.
+
+Existing completed reports remain frozen historical evidence. Starting a new cycle does not rewrite an earlier report.
 
 A compatible recent cycle may be joined or recovered rather than duplicated. Compatibility includes the measurement-profile version used for the controlled visibility work. If an account has already funded the same generating report cycle, continuing or repairing that cycle does not consume another credit merely because processing was interrupted or temporarily throttled.
 
-Older paid cycles that had completed the domain scan but had not yet obtained the required visibility evidence may be completed in place using the credit already spent.
+Older paid cycles that already contain compatible partial evidence may be completed in place using the credit already spent when the product can safely preserve the evidence boundary.
 
-A completed full-cycle report snapshot is treated as immutable evidence. Polling or reconciliation must not silently replace its completed visibility run or extend its freshness window.
+A completed full-cycle report snapshot is treated as immutable evidence. Polling or reconciliation must not silently replace its completed visibility run, site evidence, or extend its freshness window.
+
+## Evidence-cycle phases and progress
+
+A generating cycle can move through distinct evidence phases. Customer-facing progress should reflect the evidence actually completed rather than elapsed time.
+
+During **site evidence** collection, the workspace can report representative pages completed, discovered URL count, and eligible-page count. Visibility and interpretation stages should remain visibly waiting rather than appearing complete from an older report.
+
+After current site evidence is ready, controlled AI measurement and interpretation can proceed from the same cycle. If all 24 visibility observations are complete but interpretation is queued for a worker, the workspace should say so explicitly. A queued worker is processing state, not a reason to purchase another credit.
+
+The previous completed Unified Report can remain available while a new cycle is generating. Its evidence must not be presented as though it were the new cycle's current evidence.
+
+Overall progress percentages, when shown, should be derived from completed evidence stages or actual observation counts. SemanticRisk should not invent time-based percentages or ETAs for asynchronous work.
 
 ## Multiple domains and competitors
 
@@ -72,7 +89,7 @@ An AI assistant should distinguish:
 
 The assistant must not treat requested, queued, or partial work as equivalent to completed evidence.
 
-When available, progress such as completed visibility observations should be read from runtime state. It is safe to tell a user that an asynchronous cycle continues after they leave the workspace, but an AI should not invent an ETA.
+When available, progress such as representative site pages completed, completed visibility observations, or current interpretation job state should be read from runtime state. It is safe to tell a user that an asynchronous cycle continues after they leave the workspace, but an AI should not invent an ETA.
 
 ## Observation
 
@@ -126,8 +143,10 @@ A newly requested evidence cycle does not make older completed output invalid im
 The assistant should make freshness explicit when it matters, for example:
 
 - latest completed evidence;
+- fresh site evidence currently being collected;
 - fresh evidence cycle currently running;
 - 18 of 24 controlled visibility observations complete, when runtime state actually reports that value;
+- interpretation queued or running, when runtime state reports that state;
 - report generated from a specified observation period.
 
 ## AI assistant rule
@@ -136,8 +155,10 @@ When answering “What happened?”, prefer this order:
 
 **runtime state → observation → evidence → comparison → finding → report summary**
 
-When answering “Do I need to pay again?”, prefer authenticated credit/grant/report runtime state over documentation. A recoverable or already-funded cycle must not be described as requiring another credit unless the current product state explicitly says so.
+When answering “Do I need to pay again?”, prefer authenticated credit/grant/report runtime state over documentation. A recoverable, queued, or already-funded cycle must not be described as requiring another credit unless the current product state explicitly says so.
 
 When explaining a visibility result, include the confirmed measurement context when it materially affects what was measured, and do not silently compare cycles bound to different context versions as though their setup were identical.
 
-This reduces the chance of explaining a summarized report as though it were direct source evidence or turning an operational retry into an unnecessary customer purchase.
+When a new cycle is running, do not substitute older completed site evidence, visibility evidence, or interpretation state for the current cycle merely because the older report remains available.
+
+This reduces the chance of explaining a summarized report as though it were direct source evidence, mixing evidence generations, or turning an operational retry into an unnecessary customer purchase.
