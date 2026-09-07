@@ -50,6 +50,7 @@ Any public domain can be measured without proving ownership. One SemanticRisk cr
 - [Measurement context and readiness](product/measurement-context-and-readiness.md)
 - [Scans and reports](product/scans-and-reports.md)
 - [Unified Report](product/unified-report.md)
+- [Compare & Monitor](product/compare-and-monitor.md)
 - [AI assistant boundaries](product/assistant-boundaries.md)
 
 ### AI retrieval
@@ -68,13 +69,15 @@ A useful public object relationship is:
 
 **Domain → Readiness → Measurement context → Evidence cycle → Access / Visibility / Interpretation → Comparison / Drift → Assessment → Unified Report → Repeat measurement**
 
-Portfolio relationships connect independently measured primary and comparison domains. Account context, role authority, credit/entitlement state and action-specific controls govern which operations can be performed around those objects.
+Portfolio relationships connect independently measured primary and comparison domains. Compare & Monitor can combine authorized comparison members into a versioned comparative measurement plan, completed comparison cycles and evidence-linked findings while preserving each domain's independent evidence/report state.
+
+Account context, role authority, credit/entitlement state and action-specific controls govern which operations can be performed around those objects.
 
 ## Documentation and runtime state
 
 Documentation defines concepts and supported product behaviour.
 
-Authenticated runtime state determines what is true for a particular account or domain now. An AI assistant should not infer current credit balance, report availability, evidence freshness, entitlement, scan state, queue state, readiness result, live re-check result, measurement-profile version, portfolio membership, permission, cadence execution or action success from documentation alone.
+Authenticated runtime state determines what is true for a particular account or domain now. An AI assistant should not infer current credit balance, report availability, evidence freshness, entitlement, scan state, queue state, readiness result, live re-check result, measurement-profile version, portfolio or comparison-set membership, comparison-plan version, comparison-cycle state, permission, cadence execution or action success from documentation alone.
 
 ## Scope
 
