@@ -31,6 +31,10 @@ The completed Unified Report is a frozen evidence artifact for its cycle. Depend
 
 Primary and competitor domains are independently measurable portfolio domains. Adding a competitor does not itself spend a credit; scanning that competitor uses the normal per-domain credit rule and produces separate evidence/report state.
 
+**Compare & Monitor** can combine a primary domain and authorized comparison domains into a versioned comparative measurement plan and read-only customer view. Its core measurements focus on AI-market outcomes such as recognition, category association, buyer-question outcomes, recommendations, citations, interpretation, governance/risk-sensitive outcomes and change over time. For core AI-market measurements, SemanticRisk records the direct AI answer surface first and keeps later web-grounded verification/citations separate. Customer findings are presented as **Do this**, **Watch this**, and **Advantage** with links back to persisted measurement evidence. The comparison view does not manufacture an unexplained composite winner score.
+
+The signed-in customer must have active runtime access to the primary domain and every active comparison member before the customer workspace can expose Compare & Monitor. The current comparison view is read-only: viewing it does not itself spend a credit, launch a scan/comparison cycle, edit the comparison set, activate a plan or grant access.
+
 Weekly repeat measurement is currently recommended initially to establish a comparison baseline. Daily / Weekly / Monthly cadence controls may be available, but a cadence recommendation or preference does not by itself enable automatic scanning, automatic credit spend, or recurring billing.
 
 ## Canonical live sources
@@ -59,6 +63,7 @@ Weekly repeat measurement is currently recommended initially to establish a comp
 - Measurement context and readiness: docs/product/measurement-context-and-readiness.md
 - Scans and reports: docs/product/scans-and-reports.md
 - Unified Report: docs/product/unified-report.md
+- Compare & Monitor: docs/product/compare-and-monitor.md
 - AI assistant boundaries: docs/product/assistant-boundaries.md
 - AI retrieval guidance: docs/ai/retrieval-guidance.md
 
@@ -66,7 +71,7 @@ Weekly repeat measurement is currently recommended initially to establish a comp
 
 Documentation defines product concepts and supported behaviour. It does not establish the current state of a customer's account or domain.
 
-For current account, credit, domain, scan, report, entitlement, freshness, permission, queue, readiness, live re-check, measurement-profile, portfolio, cadence-execution or action state, use an authorized SemanticRisk runtime interface when available.
+For current account, credit, domain, scan, report, entitlement, freshness, permission, queue, readiness, live re-check, measurement-profile, portfolio, comparison-set, comparison-plan, comparison-cycle, cadence-execution or action state, use an authorized SemanticRisk runtime interface when available.
 
 Do not invent undocumented capabilities, API endpoints, entitlements, billing effects, security guarantees, model coverage or successful execution states.
 
@@ -75,6 +80,8 @@ A SemanticRisk claim records what an AI model appeared to understand or assert f
 Natural-language intent does not bypass product controls. State-changing actions remain subject to authentication, authority, entitlement, freshness and action-specific runtime checks.
 
 A missing optional machine-readable file such as `llms.txt` or `claims.json` does not by itself mean a public domain cannot be measured. Readiness should use the actual runtime result.
+
+In comparison evidence, "not observed" must not be paraphrased as proof that another organisation lacks a capability. Direct AI answer outcomes and later web-grounded verification should remain distinguishable.
 
 ## Historical material
 
