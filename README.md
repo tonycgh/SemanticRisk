@@ -41,12 +41,14 @@ SemanticRisk uses one public six-stage sequence across the current product and d
 
 1. **Access & readiness** — can the relevant public website evidence be reached and discovered?
 2. **AI visibility** — does the organisation appear in controlled buyer-prompt observations?
-3. **Interpretation** — what claims, categories, and descriptions are formed from the available evidence?
-4. **Drift & change** — what changed between comparable evidence cycles?
-5. **Assessment + Unified Report** — what is material, unusual or worth addressing, and what completed evidence artifact preserves the result?
-6. **Schedule / repeat measurement** — review repeat-measurement cadence; weekly is currently recommended initially to establish a comparison baseline.
+3. **Interpretation** — what claims, categories, descriptions and representation/grounding gaps are observed where measured?
+4. **Drift & change** — what changed between compatible evidence cycles?
+5. **Assessment & action** — what is material, unusual, risky or worth addressing based on current evidence?
+6. **Unified Report** — one customer-facing evidence artifact containing findings, comparison, priorities, supporting evidence and a printable/PDF rendering.
 
-Internal documentation may describe lower-level operations such as capture, extraction, normalization, comparison, and review. Those are implementation activities that map into the six public stages rather than separate customer-facing product models.
+Internal documentation may describe lower-level operations such as capture, extraction, normalization, comparison, verification, and review. Those are implementation activities that map into the six public stages rather than separate customer-facing product models.
+
+Repeat measurement is a cadence applied after a completed baseline rather than a separate seventh product stage. Weekly repeat measurement is currently recommended initially when enough observations are needed to distinguish persistent movement from one-off variation.
 
 ---
 
@@ -82,17 +84,20 @@ Depending on available evidence, it can include:
 - robots.txt, sitemap and machine-readable helper-file evidence;
 - website semantic coverage and captured page evidence;
 - core versus supporting evidence and recurring extracted claims;
-- tensions, contradictions, omissions, narrowing, overstatement or abstention where supported;
-- controlled buyer-prompt AI visibility evidence;
+- controlled buyer-prompt AI visibility and recommendation evidence;
+- direct AI representation captured without a supplied current web-search tool where configured;
+- later grounded verification and **Representation / Grounding Gap** assessment;
+- supported, partially supported, unsupported/unverified, contradicted, outdated/stale or unverifiable claim assessments where evidence permits;
 - provider/model-lane coverage and repeatability;
-- competitor or alternative-provider displacement;
+- competitor or alternative-provider displacement under the same governed comparison context;
 - citation and source-provenance evidence;
-- drift and change findings from comparable cycles;
-- evidence-linked remediation using **Observe → Explain → Change → Re-measure → Verify**;
+- drift and change findings only from compatible repeat evidence;
+- evidence-linked **Do this**, **Watch this**, and supported **Advantages** findings;
+- remediation using **Observe → Explain → Change → Re-measure → Verify**;
 - portfolio/history context where available;
-- appendices for prompts, observation ledgers, site inventory, methodology and provenance.
+- appendices for prompts, observation ledgers, site inventory, methodology and provenance where the underlying evidence was persisted.
 
-Missing evidence should be stated rather than invented. Diagnostic counts are not market share, and machine-readable helper files are not ranking or visibility guarantees.
+Missing evidence should be stated rather than invented. Diagnostic counts are not market share. Unsupported does not automatically mean hallucinated. A first observation does not establish drift. Presence of `llms.txt`, `claims.json`, a sitemap, schema or another machine-readable signal does not establish that an evaluated AI provider used it or that it caused a visibility result.
 
 The report can be reviewed inside the workspace and printed/saved as PDF from the same completed report artifact.
 
