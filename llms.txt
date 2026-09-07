@@ -1,8 +1,8 @@
 # SemanticRisk
 
-> AI visibility and interpretation intelligence for public websites.
+> AI visibility, interpretation accuracy and semantic drift intelligence for public websites.
 
-SemanticRisk checks whether AI systems can access and surface an organisation, what they understand from its public website, which claims and classifications they form, and what changes between comparable evidence cycles.
+SemanticRisk measures whether specified AI systems surface an organisation, what they say about it, how material representations compare with current public evidence and competitors, and what changes between compatible evidence cycles.
 
 This repository is the public documentation and reference layer for SemanticRisk. The live website at https://semanticrisk.io is authoritative for current commercial terms and authenticated runtime state.
 
@@ -25,13 +25,19 @@ After evidence exists, **Re-check live · No credit** performs fresh discovery a
 
 One SemanticRisk credit costs US$5.95. Standard packs are 1, 10, 20 and 100 credits. One credit grants a current reusable Unified Report when no more than 30 days old, or funds/joins the next shared public-domain evidence cycle when no fresh reusable report exists. An explicit early refresh consumes another credit.
 
-A fresh paid evidence cycle binds the site scan and controlled AI visibility observations to the same report cycle. Repeat completed cycles can compare interpretation, buyer-prompt visibility and other compatible evidence without rewriting earlier completed evidence.
+A fresh paid evidence cycle binds the site scan and required controlled AI observations to the same report cycle. Repeat completed cycles can compare interpretation, buyer-prompt visibility and other compatible evidence without rewriting earlier completed evidence.
 
-The completed Unified Report is a frozen evidence artifact for its cycle. Depending on available evidence it can include a page-1 executive summary, readiness and machine-file evidence, website semantic coverage, recurring claims and tensions, controlled buyer-intent visibility, provider/model-lane coverage, competitor displacement, citation hosts, drift/change evidence, an evidence-linked remediation plan, history context, and appendices containing prompts, observation ledgers, site inventory, methodology and provenance. Missing evidence should be stated rather than invented.
+The completed Unified Report is a frozen evidence artifact for its cycle. Depending on available evidence it can include a page-1 executive summary, readiness and machine-file evidence, website semantic coverage, recurring claims and tensions, controlled buyer-intent visibility, direct AI representation before grounded verification where configured, provider/model-lane coverage, competitor displacement, citation hosts, representation/grounding gaps, evidence-bounded claim accuracy, drift/change evidence, an evidence-linked remediation plan, history context, and appendices containing prompts, observation ledgers, site inventory, methodology and provenance. Missing evidence should be stated rather than invented.
 
 Primary and competitor domains are independently measurable portfolio domains. Adding a competitor does not itself spend a credit; scanning that competitor uses the normal per-domain credit rule and produces separate evidence/report state.
 
-**Compare & Monitor** can combine a primary domain and authorized comparison domains into a versioned comparative measurement plan and read-only customer view. Its core measurements focus on AI-market outcomes such as recognition, category association, buyer-question outcomes, recommendations, citations, interpretation, governance/risk-sensitive outcomes and change over time. For core AI-market measurements, SemanticRisk records the direct AI answer surface first and keeps later web-grounded verification/citations separate. Customer findings are presented as **Do this**, **Watch this**, and **Advantage** with links back to persisted measurement evidence. The comparison view does not manufacture an unexplained composite winner score.
+**Compare & Monitor** can combine a primary domain and authorized comparison domains into a versioned comparative measurement plan and read-only customer view. Its core measurements focus on AI-market outcomes such as recognition, category association, buyer-question outcomes, recommendations, citations, interpretation, governance/risk-sensitive outcomes and change over time. The primary company's governed measurement context is applied across the comparison set. For core AI-market measurements, SemanticRisk records the direct AI answer surface first and keeps later web-grounded verification/citations separate. Customer findings are presented as **Do this**, **Watch this**, and **Advantage** with links back to persisted measurement evidence. The comparison view does not manufacture an unexplained composite winner score.
+
+For configured direct-answer measurements, SemanticRisk records the answer without supplying a current web-search tool to that measured answer call and preserves the observable execution mode. A later grounded pass can verify factual support and add citations but must not replace the answer that was actually measured. This does not reveal or make claims about model training data, hidden retrieval, memory or internal reasoning.
+
+A material difference between the recorded AI representation and current reference evidence is a **Representation / Grounding Gap**. It is not automatically semantic drift. Drift requires a later compatible observation and describes change over time.
+
+Where evidence permits, claim assessments can distinguish **Supported**, **Partially supported**, **Unsupported / unverified**, **Contradicted**, **Outdated / stale**, and **Unverifiable**. SemanticRisk does not use hallucination as a synonym for every unsupported or uncited statement.
 
 The signed-in customer must have active runtime access to the primary domain and every active comparison member before the customer workspace can expose Compare & Monitor. The current comparison view is read-only: viewing it does not itself spend a credit, launch a scan/comparison cycle, edit the comparison set, activate a plan or grant access.
 
@@ -59,6 +65,7 @@ Weekly repeat measurement is currently recommended initially to establish a comp
 - AI visibility vs interpretation: docs/concepts/visibility-vs-interpretation.md
 - Interpretation drift: docs/concepts/interpretation-drift.md
 - Methodology overview: docs/methodology/overview.md
+- Representation, grounding and claim assessment: docs/methodology/representation-grounding-and-claim-assessment.md
 - Object model: docs/product/object-model.md
 - Measurement context and readiness: docs/product/measurement-context-and-readiness.md
 - Scans and reports: docs/product/scans-and-reports.md
@@ -79,7 +86,7 @@ A SemanticRisk claim records what an AI model appeared to understand or assert f
 
 Natural-language intent does not bypass product controls. State-changing actions remain subject to authentication, authority, entitlement, freshness and action-specific runtime checks.
 
-A missing optional machine-readable file such as `llms.txt` or `claims.json` does not by itself mean a public domain cannot be measured. Readiness should use the actual runtime result.
+A missing optional machine-readable file such as `llms.txt` or `claims.json` does not by itself mean a public domain cannot be measured. Readiness should use the actual runtime result. The presence of helper files such as llms.txt, claims files, robots.txt or sitemap.xml is not proof that an AI provider used them or that they caused a visibility outcome.
 
 In comparison evidence, "not observed" must not be paraphrased as proof that another organisation lacks a capability. Direct AI answer outcomes and later web-grounded verification should remain distinguishable.
 
