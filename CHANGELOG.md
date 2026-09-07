@@ -18,6 +18,7 @@ It is not a production deployment log and does not include private implementatio
 - Dedicated Unified Report contract describing the completed report as a frozen evidence artifact with executive summary, detailed evidence sections, remediation cycle, appendices, provenance, workspace review and printable/PDF rendering.
 - Free **Re-check live · No credit** contract for comparing current discovery against the evidence behind the current report without automatically spending a credit or starting a paid evidence cycle.
 - Evidence-led **Review latest scan evidence** setup assistance that can compare the saved measurement profile with newer captured public claims before the next paid cycle, without consuming a credit.
+- Dedicated **Compare & Monitor** contract for authorized primary/comparison-domain sets, versioned comparative measurement plans, completed comparison cycles, evidence-linked findings and the current read-only customer workspace view.
 
 ### Changed
 
@@ -31,7 +32,11 @@ It is not a production deployment log and does not include private implementatio
 - Weekly repeat measurement is documented as the current initial recommendation for establishing a comparison baseline, while Daily / Weekly / Monthly cadence controls remain runtime product state.
 - Readiness documentation distinguishes current lightweight live discovery from older **Last full site evidence** and preserves the current report's full evidence as the preferred re-check comparison baseline.
 - A material readiness/discovery change may justify recommending a fresh 1-credit evidence cycle, but the free live re-check itself consumes no credit and does not automatically start the paid cycle.
-- AI runtime-state guidance includes readiness result, live re-check result, measurement-profile freshness/version, report grant, portfolio membership, cadence execution and work state.
+- AI runtime-state guidance includes readiness result, live re-check result, measurement-profile freshness/version, report grant, portfolio membership, comparison-set membership, comparison-plan version, comparison-cycle state, cadence execution and work state.
+- Compare & Monitor core measurements are documented as AI-market outcomes rather than a feature checklist. Direct AI answer outcomes are captured separately from later web-grounded factual verification and citations.
+- Comparison findings are presented as **Do this**, **Watch this**, and **Advantage**, remain linked to persisted measurement evidence, and must use evidence-bounded language rather than treating "not observed" as proof of competitor absence.
+- Compare & Monitor does not create an unexplained composite winner/rank score. Recognition, recommendation, citation, interpretation, governance and drift remain separable evidence dimensions.
+- The current customer Compare & Monitor view is read-only and requires runtime access to the primary domain and every active comparison member; viewing it does not spend a credit, launch a comparison cycle, edit membership, activate a plan or grant access.
 - The former US$200 Comprehensive AI Visibility & Interpretation Review is historical and is not a current commercial offer. Current pricing and credit rules are governed by the live SemanticRisk product sources.
 
 ### Historical note
