@@ -1,24 +1,53 @@
 # Compare & Monitor
 
-Compare & Monitor is the customer-facing comparative evidence view for a primary domain and a governed set of comparison domains.
+Compare & Monitor is the customer-facing comparative evidence workflow for a fixed primary domain and a governed set of comparison domains.
 
 It is designed to answer a practical question: **what should the customer do, what should they watch, and where does the evidence currently show an advantage or disadvantage?**
 
-Compare & Monitor does not replace each domain's own evidence or Unified Report. It combines compatible persisted comparison measurements into a read-only comparative view.
+Compare & Monitor does not replace each domain's own evidence or Unified Report. It combines compatible domain evidence under one primary-company measurement context and produces a comparison cycle, evidence-linked findings, and a comparison section in the primary domain's Unified Report.
 
-## Comparison set
+## Fixed primary and comparison selection
 
 A comparison set contains:
 
-- one primary domain;
-- one or more active comparison domains;
+- one fixed primary domain representing **My company**;
+- one or more active comparison domains selected from domains the customer can access in the workspace;
 - a versioned comparison measurement plan;
 - completed comparison measurement cycles;
 - evidence-linked findings derived from those cycles.
 
+Opening a competitor domain for inspection does not make that domain the comparison primary. The primary company's governed measurement context remains the anchor for the comparison.
+
 Comparison domains remain independently measurable domains. A comparison relationship does not imply ownership, control, affiliation, or permission to act on another organisation's website.
 
-The signed-in customer must have active runtime access to the primary domain and every active comparison member before the customer workspace can expose the comparison.
+The signed-in customer must have active runtime access to the primary domain and every active comparison member before the customer workspace can expose or execute the comparison.
+
+Selecting or deselecting a comparison domain changes the customer's comparison set. Selection itself does not spend a credit or launch a scan.
+
+## Evidence modes and credits
+
+Compare & Monitor separates **domain evidence acquisition** from **comparison assembly**.
+
+The customer can choose between two evidence modes before fresh domain work is requested:
+
+- **Use current evidence where available** — reuse still-current paid reports already granted to this account and request fresh evidence only for selected domains that need it. The displayed credit cost is the number of selected domains that require fresh evidence.
+- **Force fresh evidence for all selected domains** — request one new evidence cycle for every selected domain. The displayed credit cost is one credit per selected domain.
+
+A current report belonging to another account is not treated as this customer's already-paid current evidence unless the runtime entitlement/grant rules make it current for this account.
+
+If **every selected domain already has current paid evidence for the account**, SemanticRisk can build a new Compare & Monitor comparison cycle and findings from those current reports for **0 credits**. That path does not launch a new domain scan. Comparison processing can still take time because the governed comparison measurement and findings are being produced from the current evidence.
+
+If the zero-credit comparison build fails, retrying that comparison build does not by itself require a domain scan or another credit. Runtime state remains authoritative for whether any selected domain later needs fresh evidence.
+
+## Primary AI Measurement Plan preflight
+
+Before paid comparison work is started, SemanticRisk resolves one primary-company AI Measurement Plan and applies that governed buyer/category context across the comparison set.
+
+The primary context can be recovered from supported existing product evidence such as an active profile, compatible historical visibility context, governed taxonomy, or sufficiently strong stored public claim evidence.
+
+When no defensible primary context can be resolved, paid comparison work is blocked before credits are used and the primary setup requires review.
+
+A competitor should not be asked to define a separate comparison category merely because it is being measured. Fresh competitor evidence is measured under the fixed primary comparison context while the competitor's own independent domain evidence/profile remains a separate product object.
 
 ## Measurement plan
 
@@ -72,26 +101,23 @@ Not observing a capability, claim, recommendation or citation is not proof that 
 
 Compare & Monitor should use evidence-bounded language such as "not observed in this measurement" rather than turning absence from the evaluated evidence into an unsupported factual claim about a competitor.
 
-## Customer workspace view
+## Customer workspace and report destination
 
-The current customer workspace presentation is read-only. It can expose:
+The workspace is the control/progress surface for comparison selection, evidence mode, credit requirement and comparison state. Detailed comparison interpretation belongs in the completed Unified Report rather than being duplicated as a second competing report surface in the workspace.
 
-- an executive comparison summary;
-- Do this findings;
-- Watch this findings;
-- Advantages;
-- a collapsed measurement-evidence matrix showing the underlying comparative observations.
+Customer-visible domain states can distinguish queued/scanning/AI measurement/processing/finalizing/ready/failed conditions. Aggregate Compare & Monitor progress should describe how many selected domains are ready rather than implying that the primary domain's progress represents the whole set.
 
-The current view does not by itself:
+When the selected domains are current and the completed comparison exactly matches the active selection, **View Compare & Monitor Report** opens the primary domain's Unified Report. Individual competitor reports remain supporting domain evidence and can still be opened separately.
 
-- spend a credit;
-- launch a scan or comparison cycle;
-- edit the comparison set;
-- activate or change a measurement plan;
-- grant access to a domain;
-- take action against a compared organisation.
+The workspace can expose:
 
-Those states and actions remain governed by their own runtime authorization and entitlement rules.
+- comparison membership and evidence mode;
+- credit requirement before fresh evidence is requested;
+- current-domain readiness and aggregate comparison progress;
+- comparison build state such as **Building comparison…** when current reports are being assembled;
+- the final Compare & Monitor report action when compatible findings are ready.
+
+Simply viewing the workspace or a completed comparison does not itself spend a credit, launch a scan, grant domain access, or force a fresh evidence cycle.
 
 ## No composite winner score
 
@@ -105,10 +131,17 @@ Documentation explains the Compare & Monitor contract but does not establish cur
 
 An AI assistant must use authorized runtime state to determine:
 
-- which comparison set is active;
+- which primary domain and comparison set are active;
 - which domains the customer may access;
-- which measurement-plan version is active;
-- whether a comparison cycle completed or failed;
+- which selected domains already have current paid evidence for this account;
+- the current reuse-mode and force-fresh credit cost;
+- whether the primary measurement context is ready or needs review;
+- which measurement-plan and probe versions are active;
+- whether domain evidence is queued, running, ready or failed;
+- whether a zero-credit current-evidence comparison is preparing, running, complete or failed;
+- whether a completed comparison exactly matches the active selected domains;
 - which findings are current;
 - whether the displayed evidence is compatible for longitudinal comparison;
 - whether any state-changing comparison action is currently available or authorized.
+
+An AI assistant must not describe a zero-credit comparison build as a free new domain scan. It is a comparison computation using already-current paid domain evidence. Conversely, it must not tell the customer to buy fresh domain evidence when runtime state says all selected reports are current and eligible for the zero-credit comparison path.
