@@ -44,9 +44,21 @@ SemanticRisk uses a measurement profile to frame the controlled buyer-intent obs
 
 When governed taxonomy provides a defensible market category, SemanticRisk can build the standard buyer-prompt setup automatically. The customer does not have to author the six prompts manually.
 
-When no defensible governed category exists, the workspace blocks the paid AI measurement before a credit is used and asks for one meaningful market-category confirmation. The buyer task and decision/trust wording can then be derived and shown for review.
+When an active profile is unavailable, supported product evidence can also be used to recover or propose the measurement context. For Compare & Monitor, the primary-company context may be resolved from compatible historical visibility metadata, governed taxonomy, or stored public claim evidence.
+
+When stored claim evidence produces a complete **high-confidence** AI classification, the current product can persist that classification as the active primary measurement profile automatically so the comparison can proceed. Medium- or low-confidence classification remains a proposal for human review and must not start paid work.
+
+When no defensible context can be resolved, the workspace blocks paid AI measurement before a credit is used and asks for meaningful market-category confirmation. The buyer task and decision/trust wording can then be derived and shown for review.
 
 The measurement profile is versioned. A completed or running visibility cycle remains bound to the profile version used when that cycle was created. Changing the setup later must not silently rewrite earlier evidence.
+
+## Compare & Monitor primary context
+
+Compare & Monitor uses the primary company's governed measurement context across the selected comparison set. Opening or measuring a competitor does not transfer comparison-primary status to that competitor and does not require the competitor to define its own comparison category.
+
+Before fresh paid comparison evidence is queued, SemanticRisk preflights the primary AI Measurement Plan. If the primary context is unresolved, the comparison is stopped before credits are spent.
+
+Competitor evidence remains separate from the primary company's profile. A comparison run can apply the primary context to a competitor measurement for comparability without redefining the competitor's independent long-term measurement profile.
 
 ## Review latest scan evidence
 
@@ -64,7 +76,7 @@ If the latest evidence supports the current setup, the assistant may say that no
 
 A workspace can include the customer's primary domain and additional comparison or competitor domains. Comparison domains are normal measurable domains, not annotations attached to the primary domain. Each domain has its own evidence state and Unified Report.
 
-Adding a competitor to the portfolio does not itself spend a credit. When the customer chooses to run a paid evidence cycle for that competitor, the normal per-domain credit rules apply.
+Adding or selecting a competitor does not itself spend a credit. Whether a selected domain needs a new credit-funded evidence cycle depends on the account's current report/evidence state and the Compare & Monitor evidence mode. See [Compare & Monitor](compare-and-monitor.md).
 
 ## Repeat-measurement preference
 
@@ -74,4 +86,4 @@ A cadence selection or recommendation does not by itself spend credits or enable
 
 ## AI assistant rules
 
-An AI assistant should distinguish free readiness, live re-check, and measurement-setup review from paid evidence cycles; use current runtime evidence/profile state rather than infer freshness; preserve profile-version boundaries; avoid treating optional machine files as visibility guarantees; and never imply that reviewing or saving measurement setup has spent a credit or started a new scan.
+An AI assistant should distinguish free readiness, live re-check, measurement-setup review, comparison-context preflight and paid evidence cycles; use current runtime evidence/profile state rather than infer freshness; preserve profile-version boundaries; avoid treating optional machine files as visibility guarantees; and never imply that reviewing setup, automatically resolving a high-confidence context, or selecting a comparison domain has itself spent a credit or started a new domain scan.
