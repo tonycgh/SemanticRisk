@@ -40,17 +40,29 @@ SemanticRisk does not treat every HTTP 2xx response as proof that a machine-read
 
 ## AI measurement setup
 
-SemanticRisk uses a measurement profile to frame the controlled buyer-intent observations for a domain. The profile can include market/category, buyer decision task, decision/trust factors, and geography when relevant.
+SemanticRisk uses a measurement profile to frame the controlled buyer-intent observations for a domain. The profile can include organisation/entity, broad sector, market/category, buyer decision task, decision/trust factors, and geography when relevant.
 
 When governed taxonomy provides a defensible market category, SemanticRisk can build the standard buyer-prompt setup automatically. The customer does not have to author the six prompts manually.
 
 When an active profile is unavailable, supported product evidence can also be used to recover or propose the measurement context. For Compare & Monitor, the primary-company context may be resolved from compatible historical visibility metadata, governed taxonomy, or stored public claim evidence.
 
-When stored claim evidence produces a complete **high-confidence** AI classification, the current product can persist that classification as the active primary measurement profile automatically so the comparison can proceed. Medium- or low-confidence classification remains a proposal for human review and must not start paid work.
+When stored claim evidence produces a complete **high-confidence** AI classification, the current product can persist that classification as the active primary measurement profile automatically so the comparison can proceed. Medium- or low-confidence classification remains a proposal for human review and must not start paid work when no defensible current context is available.
 
 When no defensible context can be resolved, the workspace blocks paid AI measurement before a credit is used and asks for meaningful market-category confirmation. The buyer task and decision/trust wording can then be derived and shown for review.
 
 The measurement profile is versioned. A completed or running visibility cycle remains bound to the profile version used when that cycle was created. Changing the setup later must not silently rewrite earlier evidence.
+
+## Fresh evidence-derived context
+
+A fresh coherent paid cycle captures and synthesizes site evidence before controlled visibility observations begin. When that same-cycle evidence supports it, SemanticRisk can classify the organisation/entity, broad sector, buyer-facing market/category, buyer decision need, decision/risk need, and geography before launching the visibility battery.
+
+High-confidence context that is owned by SemanticRisk's evidence classification can be persisted automatically as a new profile version. A prompt-affecting automatic change creates a new immutable version rather than rewriting the meaning of earlier observations.
+
+Automatic refinement is deliberately bounded. A customer-confirmed market/category should not be silently replaced merely because a classifier proposes another label, and genuinely custom buyer-task or decision/risk wording should be preserved. Legacy or clearly generic wording can be improved when the fresh evidence supports a more specific formulation.
+
+Broad geography terms such as `global`, `worldwide`, or `international` are treated as **unbounded geography**, not as literal locations to insert into buyer prompts. This prevents constructions such as “in global.”
+
+Lower-confidence evidence should not silently replace a defensible current profile. If no usable context exists, the product should require review before paid AI measurement proceeds.
 
 ## Compare & Monitor primary context
 
@@ -86,4 +98,4 @@ A cadence selection or recommendation does not by itself spend credits or enable
 
 ## AI assistant rules
 
-An AI assistant should distinguish free readiness, live re-check, measurement-setup review, comparison-context preflight and paid evidence cycles; use current runtime evidence/profile state rather than infer freshness; preserve profile-version boundaries; avoid treating optional machine files as visibility guarantees; and never imply that reviewing setup, automatically resolving a high-confidence context, or selecting a comparison domain has itself spent a credit or started a new domain scan.
+An AI assistant should distinguish free readiness, live re-check, measurement-setup review, same-cycle evidence classification, comparison-context preflight and paid evidence cycles; use current runtime evidence/profile state rather than infer freshness; preserve profile-version boundaries; preserve customer-confirmed or genuinely custom context unless runtime state says it was changed; interpret broad global-scope terms as unbounded geography rather than literal prompt locations; avoid treating optional machine files as visibility guarantees; and never imply that reviewing setup, automatically resolving a high-confidence context, or selecting a comparison domain has itself spent an additional credit or started another domain scan.
