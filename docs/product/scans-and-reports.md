@@ -16,7 +16,7 @@ Before paid Buyer Visibility Core work starts in the workspace, SemanticRisk sep
 
 The readiness step checks whether usable public content can be measured and inspects common machine-readable discovery resources. It does not consume a paid scan credit merely because it performs that preflight.
 
-The customer also confirms a versioned measurement context describing the market/category, buyer need, decision/risk need, geography when relevant, and comparison set. The controlled visibility cycle is bound to the confirmed profile version used when the cycle begins.
+Controlled visibility work requires a defensible, versioned measurement context describing the market/category, buyer need, decision/risk need, geography when relevant, and comparison context. That context may come from a customer-confirmed profile, governed taxonomy, compatible existing evidence, or sufficiently confident evidence classification. A visibility cycle is bound to the profile version used when the cycle begins.
 
 A later context edit must not silently change the meaning of an earlier cycle. Earlier evidence remains associated with its original profile version.
 
@@ -26,15 +26,18 @@ See [Measurement context and readiness](measurement-context-and-readiness.md).
 
 A fresh credit-funded Unified Report is produced from one coherent evidence cycle rather than from independently selected recent artifacts.
 
-For a new paid cycle, SemanticRisk performs fresh public discovery before the credit-funded work is committed, creates a cycle-bound site-evidence audit, selects a representative page set, and gathers that site evidence first. The cycle then proceeds to the controlled AI measurement and interpretation work needed for the report.
+For a new paid cycle, SemanticRisk performs fresh public discovery before the credit-funded work is committed, creates a cycle-bound site-evidence audit, selects a representative page set, and gathers that site evidence first. The cycle then proceeds to semantic synthesis/context preparation and the controlled AI measurement and interpretation work needed for the report.
 
 The current full cycle includes:
 
 1. fresh site discovery and a cycle-bound representative website-evidence set;
-2. Buyer Visibility Core v1: six controlled buyer-intent prompts, two model lanes, and two repetitions, for 24 controlled AI visibility observations; and
-3. interpretation/scan evidence and semantic synthesis bound to that same report cycle where governed claims are available.
+2. semantic synthesis and evidence-backed measurement-context preparation from that site evidence where governed claims are available;
+3. Buyer Visibility Core v1: six controlled buyer-intent prompts, two model lanes, and two repetitions, for 24 controlled AI visibility observations; and
+4. interpretation/scan evidence bound to that same report cycle.
 
 Fresh discovery must produce at least one eligible representative site page before AI measurement is allowed to begin. A zero-page result is a blocked site-evidence state, not successful completion. SemanticRisk should not consume a new customer credit merely to publish an empty coherent report.
+
+Where fresh site evidence supports a high-confidence SemanticRisk-owned classification, prompt-affecting context changes can create a new immutable measurement-profile version before the visibility observations launch. Customer-confirmed category context and genuinely custom buyer/risk wording are preserved unless the customer or governed runtime state changes them. Lower-confidence classification should not silently replace a defensible current profile.
 
 The Unified Report is materialized only after the required evidence for the bound cycle has completed successfully. A new cycle must not silently reuse an older site-audit snapshot merely because newer visibility or interpretation evidence exists.
 
@@ -48,7 +51,7 @@ Older paid cycles that already contain compatible partial evidence may be comple
 
 Where governed site claims are available after the bound site-evidence phase becomes terminal, SemanticRisk can run or reuse semantic synthesis automatically as part of the same paid evidence cycle. This internal AI processing is part of the funded report workflow and does not consume an additional customer credit.
 
-A completed full-cycle report snapshot is treated as immutable evidence. Polling or reconciliation must not silently replace its completed visibility run, site evidence, or extend its freshness window.
+A completed full-cycle report snapshot is treated as immutable evidence. Polling or reconciliation must not silently replace its completed visibility run, site evidence, measurement context, or extend its freshness window.
 
 ## Evidence-cycle phases and progress
 
@@ -58,7 +61,9 @@ During **site evidence** collection, the workspace can report representative pag
 
 If fresh site evidence produces no representative pages, the workspace can show a blocked/review-needed state. AI measurement should not start until a usable representative set exists, and a SemanticRisk-side repair of an already-funded invalid cycle should not be presented as requiring another credit.
 
-After current site evidence is ready, controlled AI measurement and interpretation can proceed from the same cycle. If all 24 visibility observations are complete but interpretation or semantic synthesis is queued/running, the workspace should say so explicitly. A queued worker or synthesis step is processing state, not a reason to purchase another credit.
+After current site evidence is ready, semantic synthesis/context preparation and controlled AI measurement can proceed from the same cycle. If all 24 visibility observations are complete but interpretation or semantic synthesis is queued/running, the workspace should say so explicitly. A queued worker or synthesis step is processing state, not a reason to purchase another credit.
+
+Already-funded generating cycles are advanced by server-side reconciliation rather than depending on a browser tab or repeated customer polling. A customer can leave the workspace while the funded work continues. Background progression does not authorize a new purchase, create a new account grant, or consume another credit; it advances only work that is already entitled/funded.
 
 The previous completed Unified Report can remain available while a new cycle is generating. Its evidence must not be presented as though it were the new cycle's current evidence.
 
@@ -91,14 +96,14 @@ An AI assistant should distinguish:
 - **requested** — a user or system asked for work;
 - **queued** — the work has been accepted but not completed;
 - **running** — work is actively being processed;
-- **blocked** — a required evidence condition is missing, such as no representative site pages, so downstream AI measurement cannot safely proceed;
+- **blocked** — a required evidence condition is missing, such as no representative site pages or unresolved required context, so downstream AI measurement cannot safely proceed;
 - **partial/recovering** — some required evidence exists and eligible remaining work is being recovered or retried;
 - **completed** — the governed product path reports completion;
 - **failed** — the product reports that work did not complete successfully.
 
 The assistant must not treat requested, queued, blocked, or partial work as equivalent to completed evidence.
 
-When available, progress such as representative site pages completed, completed visibility observations, current interpretation job state, or semantic-synthesis state should be read from runtime state. It is safe to tell a user that an asynchronous cycle continues after they leave the workspace, but an AI should not invent an ETA.
+When available, progress such as representative site pages completed, completed visibility observations, current interpretation job state, semantic-synthesis state, or measurement-context readiness should be read from runtime state. It is safe to tell a user that an already-funded asynchronous cycle continues after they leave the workspace, but an AI should not invent an ETA.
 
 ## Observation
 
@@ -158,6 +163,7 @@ The assistant should make freshness explicit when it matters, for example:
 - latest valid completed evidence;
 - fresh site evidence currently being collected;
 - site evidence blocked because no representative pages were produced;
+- measurement context being prepared from current-cycle evidence;
 - fresh evidence cycle currently running;
 - 18 of 24 controlled visibility observations complete, when runtime state actually reports that value;
 - interpretation or semantic synthesis queued/running, when runtime state reports that state;
@@ -169,10 +175,10 @@ When answering “What happened?”, prefer this order:
 
 **runtime state → observation → evidence → comparison → finding → report summary**
 
-When answering “Do I need to pay again?”, prefer authenticated credit/grant/report runtime state over documentation. A recoverable, queued, repair-funded, or already-funded cycle must not be described as requiring another credit unless the current product state explicitly says so.
+When answering “Do I need to pay again?”, prefer authenticated credit/grant/report runtime state over documentation. A recoverable, queued, repair-funded, background-progressing, or already-funded cycle must not be described as requiring another credit unless the current product state explicitly says so.
 
-When explaining a visibility result, include the confirmed measurement context when it materially affects what was measured, and do not silently compare cycles bound to different context versions as though their setup were identical.
+When explaining a visibility result, include the measurement context bound to that cycle when it materially affects what was measured. Do not silently compare cycles bound to different context versions as though their setup were identical, and do not imply that later evidence-derived classification rewrote earlier observations.
 
 When a new cycle is running, do not substitute older completed site evidence, visibility evidence, interpretation state, or an invalid intermediate report for the current cycle merely because an older artifact remains available.
 
-This reduces the chance of explaining a summarized report as though it were direct source evidence, mixing evidence generations, manufacturing drift across invalid evidence, or turning an operational repair into an unnecessary customer purchase.
+This reduces the chance of explaining a summarized report as though it were direct source evidence, mixing evidence generations, manufacturing drift across invalid evidence, or turning an operational repair/background progression step into an unnecessary customer purchase.
