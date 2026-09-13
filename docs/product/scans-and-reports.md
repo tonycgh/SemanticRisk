@@ -1,184 +1,80 @@
 # Scans and Reports
 
-This page defines the public reasoning relationship between SemanticRisk scans, evidence cycles, observations, findings, and reports.
+This page defines the public relationship between SemanticRisk readiness checks, evidence cycles, observations, findings and Unified Reports.
 
-## Scan
+## Readiness
 
-A scan is a bounded evaluation run against a domain.
+Before commercial AI measurement begins, SemanticRisk can perform a free public readiness/discovery check to determine whether useful evidence is reachable and what public discovery resources are available.
 
-A scan can capture website evidence, access conditions, model observations, claims, and other structured outputs used by SemanticRisk.
+A missing optional helper file such as `llms.txt` or `claims.json` does not by itself make a domain unmeasurable. The presence of a helper file also does not prove that an evaluated AI provider used it.
 
-A scan observes the target. It does not modify the target website.
+## Measurement context
 
-## Pre-scan readiness and measurement context
+Controlled AI measurement uses a versioned evidence-grounded context such as organisation/entity, sector, buyer-facing category, buyer need, decision/risk need and geography where relevant.
 
-Before paid Buyer Visibility Core work starts in the workspace, SemanticRisk separates free readiness/discovery from the paid evidence cycle.
+A completed/running cycle remains bound to the profile version under which it was created. Later context changes must not silently rewrite older evidence.
 
-The readiness step checks whether usable public content can be measured and inspects common machine-readable discovery resources. It does not consume a paid scan credit merely because it performs that preflight.
+## Commercial evidence cycles
 
-Controlled visibility work requires a defensible, versioned measurement context describing the market/category, buyer need, decision/risk need, geography when relevant, and comparison context. That context may come from a customer-confirmed profile, governed taxonomy, compatible existing evidence, or sufficiently confident evidence classification. A visibility cycle is bound to the profile version used when the cycle begins.
+A fresh commercial evidence cycle is one coherent chain rather than an arbitrary mix of recent artifacts:
 
-A later context edit must not silently change the meaning of an earlier cycle. Earlier evidence remains associated with its original profile version.
+1. fresh discovery and representative site evidence;
+2. semantic synthesis and measurement-context preparation;
+3. controlled buyer/research AI observations;
+4. interpretation and provenance evidence;
+5. comparison/drift analysis where compatible evidence exists;
+6. a frozen Unified Report.
 
-See [Measurement context and readiness](measurement-context-and-readiness.md).
+Fresh discovery must produce usable representative site evidence before downstream AI measurement starts. A zero-representative-page result is a blocked state, not a successful empty report.
 
-## Credit-funded full evidence cycle
+## Current question plans
 
-A fresh credit-funded Unified Report is produced from one coherent evidence cycle rather than from independently selected recent artifacts.
+The current Buyer Visibility Matrix v1 uses neutral, evidence-grounded buyer/research questions:
 
-For a new paid cycle, SemanticRisk performs fresh public discovery before the credit-funded work is committed, creates a cycle-bound site-evidence audit, selects a representative page set, and gathers that site evidence first. The cycle then proceeds to semantic synthesis/context preparation and the controlled AI measurement and interpretation work needed for the report.
+- Comprehensive Review: 60 questions;
+- Monitor: 30 questions;
+- Compare & Monitor: 40 questions under the fixed primary-company context.
 
-The current full cycle includes:
+The matrix is organized across ten decision dimensions and six stable research perspectives. Exact provider/model lanes, repetitions and required observation totals are calculated from the active plan at runtime.
 
-1. fresh site discovery and a cycle-bound representative website-evidence set;
-2. semantic synthesis and evidence-backed measurement-context preparation from that site evidence where governed claims are available;
-3. Buyer Visibility Core v1: six controlled buyer-intent prompts, two model lanes, and two repetitions, for 24 controlled AI visibility observations; and
-4. interpretation/scan evidence bound to that same report cycle.
+Historical six-question/twenty-four-observation batteries remain historical evidence only; they are not the current commercial requirement.
 
-Fresh discovery must produce at least one eligible representative site page before AI measurement is allowed to begin. A zero-page result is a blocked site-evidence state, not successful completion. SemanticRisk should not consume a new customer credit merely to publish an empty coherent report.
+## Progress and asynchronous work
 
-Where fresh site evidence supports a high-confidence SemanticRisk-owned classification, prompt-affecting context changes can create a new immutable measurement-profile version before the visibility observations launch. Customer-confirmed category context and genuinely custom buyer/risk wording are preserved unless the customer or governed runtime state changes them. Lower-confidence classification should not silently replace a defensible current profile.
+A generating cycle can move through site evidence, context preparation, AI measurement, interpretation, comparison/finalization and report materialization.
 
-The Unified Report is materialized only after the required evidence for the bound cycle has completed successfully. A new cycle must not silently reuse an older site-audit snapshot merely because newer visibility or interpretation evidence exists.
+Customer-facing progress should reflect actual evidence state rather than elapsed time. Useful states include queued, running, blocked, partial/recovering, completed and failed.
 
-Existing completed reports remain frozen historical evidence. Starting a new cycle does not rewrite an earlier report.
+Already-entitled work can continue through server-side reconciliation without the customer keeping a browser tab open. The product should not invent an ETA when runtime evidence does not support one.
 
-A compatible recent cycle may be joined or recovered rather than duplicated. Compatibility includes the measurement-profile version used for the controlled visibility work. If an account has already funded the same generating report cycle, continuing or repairing that cycle does not consume another credit merely because processing was interrupted or temporarily throttled.
+## Failure and repair
 
-If a previously funded coherent report is later found to be structurally invalid because the cycle completed without representative site evidence, SemanticRisk can start a replacement repair cycle using the entitlement from that previously funded report. The invalid report remains preserved for audit history, but the customer is not charged another credit for the system-caused repair.
+A recoverable provider or worker delay is processing state, not evidence that the customer needs to purchase another product.
 
-Older paid cycles that already contain compatible partial evidence may be completed in place using the credit already spent when the product can safely preserve the evidence boundary.
+If SemanticRisk produces a structurally invalid commercial report because required evidence was missing or the system failed to complete the funded/entitled outcome correctly, a repair cycle can use the existing Review or subscription entitlement when the runtime product marks that repair as eligible.
 
-Where governed site claims are available after the bound site-evidence phase becomes terminal, SemanticRisk can run or reuse semantic synthesis automatically as part of the same paid evidence cycle. This internal AI processing is part of the funded report workflow and does not consume an additional customer credit.
+Runtime entitlement remains authoritative for a particular account.
 
-A completed full-cycle report snapshot is treated as immutable evidence. Polling or reconciliation must not silently replace its completed visibility run, site evidence, measurement context, or extend its freshness window.
+## Observation, comparison and finding
 
-## Evidence-cycle phases and progress
+An **observation** is a recorded result from site or AI measurement.
 
-A generating cycle can move through distinct evidence phases. Customer-facing progress should reflect the evidence actually completed rather than elapsed time.
+A **comparison** evaluates compatible observations across time, model lanes or domains. A difference is not automatically harmful and should not be presented as proof of a website change when capture/model conditions could explain it.
 
-During **site evidence** collection, the workspace can report representative pages completed, discovered URL count, and eligible-page count. Visibility and interpretation stages should remain visibly waiting rather than appearing complete from an older report.
-
-If fresh site evidence produces no representative pages, the workspace can show a blocked/review-needed state. AI measurement should not start until a usable representative set exists, and a SemanticRisk-side repair of an already-funded invalid cycle should not be presented as requiring another credit.
-
-After current site evidence is ready, semantic synthesis/context preparation and controlled AI measurement can proceed from the same cycle. If all 24 visibility observations are complete but interpretation or semantic synthesis is queued/running, the workspace should say so explicitly. A queued worker or synthesis step is processing state, not a reason to purchase another credit.
-
-Already-funded generating cycles are advanced by server-side reconciliation rather than depending on a browser tab or repeated customer polling. A customer can leave the workspace while the funded work continues. Background progression does not authorize a new purchase, create a new account grant, or consume another credit; it advances only work that is already entitled/funded.
-
-The previous completed Unified Report can remain available while a new cycle is generating. Its evidence must not be presented as though it were the new cycle's current evidence.
-
-Overall progress percentages, when shown, should be derived from completed evidence stages or actual observation counts. SemanticRisk should not invent time-based percentages or ETAs for asynchronous work.
-
-## Multiple domains and competitors
-
-The primary site and comparison/competitor sites are separate measurable domains.
-
-Adding a competitor to a workspace portfolio does not itself spend a credit. If the customer chooses to run a paid evidence cycle for that competitor, the normal per-domain credit rule applies and the competitor receives its own evidence and Unified Report.
-
-Comparative report views may use evidence from multiple measured domains, but one domain's paid cycle should not be described as automatically funding another domain's scan.
-
-## Provider delays and failure
-
-Upstream model-provider throttling can delay individual observations. Recoverable provider throttling is retried automatically and should be presented as processing state rather than as evidence that the customer needs to purchase another cycle.
-
-Where a paid evidence cycle reaches a terminal failure and cannot produce the funded report, the consumed credit is returned automatically. A SemanticRisk-side provider failure must not be converted into a second customer charge.
-
-Exact provider limits, retry timing, queue position, and completion time are runtime/operational state and must not be inferred from this documentation.
-
-## Scan and cycle state
-
-Scans and report generation can be asynchronous work.
-
-The product may show work as queued, running, blocked, partial/recovering, completed, or failed. The exact runtime state should be read from the product rather than guessed from elapsed time or from the existence of a request.
-
-An AI assistant should distinguish:
-
-- **requested** — a user or system asked for work;
-- **queued** — the work has been accepted but not completed;
-- **running** — work is actively being processed;
-- **blocked** — a required evidence condition is missing, such as no representative site pages or unresolved required context, so downstream AI measurement cannot safely proceed;
-- **partial/recovering** — some required evidence exists and eligible remaining work is being recovered or retried;
-- **completed** — the governed product path reports completion;
-- **failed** — the product reports that work did not complete successfully.
-
-The assistant must not treat requested, queued, blocked, or partial work as equivalent to completed evidence.
-
-When available, progress such as representative site pages completed, completed visibility observations, current interpretation job state, semantic-synthesis state, or measurement-context readiness should be read from runtime state. It is safe to tell a user that an already-funded asynchronous cycle continues after they leave the workspace, but an AI should not invent an ETA.
-
-## Observation
-
-A completed scan or evidence cycle can produce one or more observations.
-
-Observations are the underlying recorded results used for later comparison. They should be preferred over report prose when an AI needs to explain the precise source of a finding.
-
-## Comparison
-
-SemanticRisk can compare observations across time or across models.
-
-A comparison can surface:
-
-- no material change;
-- content change;
-- extraction or interpretation change;
-- stance or confidence change;
-- mixed change;
-- capture or pipeline conditions that prevent a clean comparison.
-
-A difference should not automatically be presented as harmful or as proof that the website changed.
-
-Comparisons across evidence cycles should preserve the measurement context/profile version used by each cycle. If the market or buyer context changed between cycles, that context change is relevant to interpretation and should not be hidden.
-
-A structurally invalid coherent-cycle report is not a valid trend baseline merely because it reached a completed status. Normal report history and drift semantics should exclude an invalid coherent report that lacks the required representative site evidence.
-
-When an invalid report sits between the current report and the previous valid report, SemanticRisk may use an exact persisted delta against that previous valid report if such a delta exists. If no exact comparable delta is stored, the correct customer-facing state is **Comparable drift unavailable** rather than an inferred replacement direction.
-
-## Finding
-
-A finding is a reviewable result derived from evidence and comparison.
-
-A good finding should preserve enough context to answer:
-
-- what changed or differed;
-- which observations are being compared;
-- what evidence supports the finding;
-- whether the likely driver is known or uncertain;
-- why the difference may matter.
+A **finding** is an evidence-backed interpretation or action derived from observations and comparison. It should preserve enough provenance to explain what was observed, what evidence supports the finding and what remains uncertain.
 
 ## Unified Report
 
-The Unified Report is the customer-facing synthesis of the evidence cycle: available website evidence, visibility observations, comparisons, findings, and recommendations.
+The Unified Report is the frozen customer-facing synthesis of one completed evidence cycle.
 
-A report can be useful for communication and decision-making, but it is downstream of the underlying evidence.
+It may summarize observations and recommendations, but the underlying persisted evidence remains the more direct source when precise explanation is required. Later presentation improvements must not silently change the historical evidence artifact.
 
-When an AI assistant has access to structured evidence and a report, it should not invent precision that exists in neither source. If a report summarizes a change but the underlying evidence does not establish the cause, the assistant should describe the cause as uncertain.
-
-A report may also provide comparison and next-step guidance. Recommendations for repeat measurement are guidance, not proof that automated recurrence, credit spend, or recurring billing is enabled.
-
-## Regeneration and freshness
-
-A newly requested evidence cycle does not make older completed output invalid immediately. Until new work completes, the most recent valid completed observation or report remains the latest comparable completed record.
-
-The assistant should make freshness explicit when it matters, for example:
-
-- latest valid completed evidence;
-- fresh site evidence currently being collected;
-- site evidence blocked because no representative pages were produced;
-- measurement context being prepared from current-cycle evidence;
-- fresh evidence cycle currently running;
-- 18 of 24 controlled visibility observations complete, when runtime state actually reports that value;
-- interpretation or semantic synthesis queued/running, when runtime state reports that state;
-- report generated from a specified observation period.
+A first valid cycle establishes a baseline. Longitudinal drift requires compatible repeat evidence. Structurally invalid reports are not normal trend baselines; when no exact valid comparison exists the correct state is **Comparable drift unavailable**.
 
 ## AI assistant rule
 
-When answering “What happened?”, prefer this order:
+For "what happened?", prefer:
 
 **runtime state → observation → evidence → comparison → finding → report summary**
 
-When answering “Do I need to pay again?”, prefer authenticated credit/grant/report runtime state over documentation. A recoverable, queued, repair-funded, background-progressing, or already-funded cycle must not be described as requiring another credit unless the current product state explicitly says so.
-
-When explaining a visibility result, include the measurement context bound to that cycle when it materially affects what was measured. Do not silently compare cycles bound to different context versions as though their setup were identical, and do not imply that later evidence-derived classification rewrote earlier observations.
-
-When a new cycle is running, do not substitute older completed site evidence, visibility evidence, interpretation state, or an invalid intermediate report for the current cycle merely because an older artifact remains available.
-
-This reduces the chance of explaining a summarized report as though it were direct source evidence, mixing evidence generations, manufacturing drift across invalid evidence, or turning an operational repair/background progression step into an unnecessary customer purchase.
+For "do I need to pay again?", use current Review/subscription entitlement and repair state rather than historical credit rules or documentation inference.
