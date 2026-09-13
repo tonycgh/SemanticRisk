@@ -2,147 +2,102 @@
 
 **AI visibility and interpretation intelligence for public websites.**
 
-SemanticRisk examines whether AI systems can access and surface an organisation, what they understand from its public website, which claims and classifications they form, and whether that interpretation changes over time.
+SemanticRisk measures how AI systems discover, interpret, cite, compare, recommend, and change their treatment of an organisation using public evidence.
 
-> **AI visibility tells you whether you appear. SemanticRisk tells you what was understood.**
+> **AI visibility asks whether you appear. SemanticRisk also asks what was understood, what evidence supports it, how competitors are treated, and what changes over time.**
 
-[Website](https://semanticrisk.io) · [Public benchmark](https://semanticrisk.io/benchmark) · [Methodology](https://semanticrisk.io/methodology/) · [Sample Unified Report](https://semanticrisk.io/example-report) · [How it works](https://semanticrisk.io/how-it-works/)
+[Website](https://semanticrisk.io) · [Documentation](https://semanticrisk.io/docs/) · [Methodology](https://semanticrisk.io/methodology/) · [Pricing](https://semanticrisk.io/pricing/) · [How it works](https://semanticrisk.io/how-it-works/)
 
 ---
 
 ## What this repository is
 
-This repository is the **public documentation and reference layer for SemanticRisk**. It is not the production application source code, customer-data store, private scoring implementation, or infrastructure repository.
+This repository is the **public documentation and reference layer for SemanticRisk**. It is not the production application source code, customer-data store, private scoring implementation, internal prompt store, or infrastructure repository.
 
-It exists so people, AI systems, agencies, researchers, and developers can reference the same product definitions, measurement boundaries, object model, methodology, and assistant rules used by SemanticRisk.
+It exists so people and AI systems can reference one public product definition, measurement vocabulary, methodology, object model, evidence boundaries, and assistant rules.
 
-Where documentation and authenticated runtime state differ, **current runtime state is authoritative** for account balances, credits, report availability, evidence freshness, entitlements, work in progress, live re-check state, and action success.
-
----
-
-## The problem
-
-An AI system can access a company website without surfacing the company in a buyer answer. It can surface a company while misunderstanding it. It can also change that interpretation even when the underlying website appears stable.
-
-SemanticRisk therefore separates several questions that are often collapsed into a single visibility score:
-
-- Can AI-oriented crawlers reach and discover the public evidence?
-- Does the company appear in controlled buyer-prompt observations?
-- How does AI classify and describe the organisation?
-- Do models disagree, omit, narrow, or overstate claims?
-- Has the measured interpretation changed over time?
-- What evidence-backed action, if any, deserves attention next?
+Where documentation and authenticated runtime state differ, current runtime state is authoritative for plan entitlement, report availability, evidence freshness, work in progress, monitoring state, comparison state, and action success.
 
 ---
 
-## Public workspace sequence
+## Current commercial product
 
-SemanticRisk uses one public six-stage sequence across the current product and documentation:
+SemanticRisk uses one operational workspace and one customer-facing **Unified Report** for completed evidence cycles.
 
-1. **Access & readiness** — can the relevant public website evidence be reached and discovered?
-2. **AI visibility** — does the organisation appear in controlled buyer-prompt observations?
-3. **Interpretation** — what claims, categories, descriptions and representation/grounding gaps are observed where measured?
+The current public funnel is:
+
+1. **Free Public Check — $0** — anonymous public-domain diagnostic designed to establish whether useful evidence can be gathered before signup or purchase.
+2. **Comprehensive Review — $200 one time** — one broad evidence cycle and Unified Report.
+3. **Monitor — $99/month or $990/year** — recurring one-domain measurement, evidence retention, drift/change review, and reporting.
+4. **Compare & Monitor — $199/month or $1,990/year** — recurring primary-domain measurement plus competitor comparison for the primary domain and up to three selected competitors.
+
+The former $5.95 credit-pack model is historical. Credits may remain in internal records for compatibility with older accounts, but they are not the current public commercial offer.
+
+Any public domain can be evaluated without proving ownership. Product actions that affect an authenticated account still remain subject to the account's current permissions and entitlement.
+
+---
+
+## Public workflow
+
+SemanticRisk uses one six-stage customer-facing sequence:
+
+1. **Access & readiness** — can relevant public website evidence be reached and discovered?
+2. **AI visibility** — does the organisation appear in controlled buyer/research observations?
+3. **Interpretation** — how is the organisation described, classified and represented?
 4. **Drift & change** — what changed between compatible evidence cycles?
-5. **Assessment & action** — what is material, unusual, risky or worth addressing based on current evidence?
-6. **Unified Report** — one customer-facing evidence artifact containing findings, comparison, priorities, supporting evidence and a printable/PDF rendering.
+5. **Assessment & action** — what is material, unusual, risky, favourable or worth addressing?
+6. **Unified Report** — one evidence artifact containing the findings, comparison, priorities, supporting evidence and printable/PDF rendering.
 
-Internal documentation may describe lower-level operations such as capture, extraction, normalization, comparison, verification, and review. Those are implementation activities that map into the six public stages rather than separate customer-facing product models.
-
-Repeat measurement is a cadence applied after a completed baseline rather than a separate seventh product stage. Weekly repeat measurement is currently recommended initially when enough observations are needed to distinguish persistent movement from one-off variation.
+Repeat measurement is a cadence applied after a baseline, not a separate competing product model.
 
 ---
 
-## Current applied product
+## Current AI measurement design
 
-The current commercial product is one operational workspace with one customer-facing **Unified Report** per completed evidence cycle.
+Before controlled AI measurement begins, SemanticRisk uses public evidence to establish a versioned measurement context such as organisation/entity, sector, buyer-facing category, buyer need, decision/risk need and geography where relevant.
 
-- Any public domain can be checked without proving ownership.
-- One SemanticRisk credit costs **US$5.95**.
-- Standard credit packs are **1, 10, 20, and 100 credits**.
-- A credit grants the current reusable Unified Report when that report is no more than 30 days old.
-- If no fresh reusable report exists, one credit funds or joins the next shared public-domain evidence cycle.
-- An explicit early refresh consumes another credit.
-- Reusable public-domain evidence may be shared across entitled customers only when it is explicitly safe for reuse.
-- Customer-private inputs are not exposed across customers.
+The current commercial question matrix is evidence-grounded and neutral:
 
-Before paid Buyer Visibility Core work starts, SemanticRisk performs a free readiness/discovery check and uses a confirmed, versioned measurement context so the market and buyer framing of each visibility cycle is preserved.
+- **Comprehensive Review:** 60 buyer/research questions;
+- **Monitor:** 30 questions per recurring commercial cycle;
+- **Compare & Monitor:** 40 questions under the fixed primary-company comparison context.
 
-After evidence exists, **Re-check live · No credit** can perform fresh public discovery and compare current helper-file, sitemap and URL-inventory state against the evidence behind the current report. A material change can justify a recommendation for another full evidence cycle, but the free re-check does not spend a credit or automatically start paid work.
+The matrix is built from ten decision dimensions across six stable research perspectives. Questions are designed not to force the target company into discovery or recommendation answers. Exact provider/model lanes, repetitions and resulting observation counts are versioned runtime measurement state rather than fixed public promises.
 
-Commercial and authenticated runtime details are authoritative at [semanticrisk.io](https://semanticrisk.io).
+Earlier six-prompt batteries remain historical longitudinal evidence and are not the current commercial measurement breadth.
 
 ---
 
 ## What the Unified Report can contain
 
-The Unified Report is a frozen evidence artifact for its completed cycle rather than a transient dashboard summary.
+Depending on available evidence, the Unified Report can include:
 
-Depending on available evidence, it can include:
-
-- a page-1 executive summary;
-- access, discovery and readiness evidence;
-- robots.txt, sitemap and machine-readable helper-file evidence;
-- website semantic coverage and captured page evidence;
-- core versus supporting evidence and recurring extracted claims;
-- controlled buyer-prompt AI visibility and recommendation evidence;
-- direct AI representation captured without a supplied current web-search tool where configured;
-- later grounded verification and **Representation / Grounding Gap** assessment;
-- supported, partially supported, unsupported/unverified, contradicted, outdated/stale or unverifiable claim assessments where evidence permits;
+- an executive summary and prioritized actions;
+- access, discovery, robots.txt, sitemap and machine-readable helper-file evidence;
+- representative website evidence and semantic coverage;
+- recurring claims, tensions and evidence provenance;
+- controlled buyer/research visibility and recommendation observations;
+- direct AI representation and later grounded verification where configured;
+- representation/grounding gaps and evidence-bounded claim assessments;
+- citation and source behaviour;
+- competitor displacement and comparative findings;
 - provider/model-lane coverage and repeatability;
-- competitor or alternative-provider displacement under the same governed comparison context;
-- citation and source-provenance evidence;
-- drift and change findings only from compatible repeat evidence;
-- evidence-linked **Do this**, **Watch this**, and supported **Advantages** findings;
-- remediation using **Observe → Explain → Change → Re-measure → Verify**;
-- portfolio/history context where available;
-- appendices for prompts, observation ledgers, site inventory, methodology and provenance where the underlying evidence was persisted.
+- drift/change findings from compatible repeat evidence;
+- evidence-linked **Do this**, **Watch this**, and supported **Advantage** findings;
+- appendices for question identifiers, observation ledgers, site inventory, methodology and provenance when persisted.
 
 Missing evidence should be stated rather than invented. Diagnostic counts are not market share. Unsupported does not automatically mean hallucinated. A first observation does not establish drift. Presence of `llms.txt`, `claims.json`, a sitemap, schema or another machine-readable signal does not establish that an evaluated AI provider used it or that it caused a visibility result.
-
-The report can be reviewed inside the workspace and printed/saved as PDF from the same completed report artifact.
-
-See [Unified Report](docs/product/unified-report.md).
-
----
-
-## AI visibility vs interpretation
-
-| AI visibility | SemanticRisk interpretation intelligence |
-|---|---|
-| Measures whether a company appears in generated answers | Evaluates what AI systems understood about the company |
-| Tracks prompt-level presence, recommendations, citations, and sources | Records claims, classifications, disagreement, omission, narrowing, and change |
-| Answers “Did we appear?” | Answers “What did the system understand, and did that change?” |
-| Can be influenced by access, relevance, competition, and source selection | Is traced back to public wording, structure, capture conditions, and model output |
-
-SemanticRisk combines these views rather than treating them as competing product categories.
 
 ---
 
 ## Framework boundaries
 
-SemanticRisk does **not**:
+SemanticRisk does **not** determine objective truth, certify safety or compliance, reveal hidden model training data or internal retrieval, guarantee control over downstream AI output, or replace human judgement.
 
-- determine objective truth;
-- certify safety, compliance, or correctness;
-- replace human judgement;
-- guarantee control over downstream AI output;
-- function as a standalone decision-maker;
-- infer a trend when comparable evidence does not exist.
-
-Its purpose is evidence-led measurement and interpretation intelligence.
-
----
-
-## Intended uses
-
-SemanticRisk is relevant to communications and reputation teams; SEO, GEO, AEO and web-strategy agencies; marketing and brand teams; governance, assurance and risk functions; evaluation of AI assistants and public-facing AI output; post-incident analysis; and research or education.
-
-It is especially useful where AI-generated descriptions may influence customers, procurement teams, investors, regulators, partners, or the public.
+Its purpose is evidence-led measurement, interpretation intelligence, comparison and longitudinal monitoring.
 
 ---
 
 ## Repository status and licence
 
-This repository contains public reference material only. It is not the distribution point for production code, customer data, private scoring logic, or infrastructure.
-
-Unless a file states otherwise, the documentation and reference material in this repository are made available under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** licence. See `LICENSE` for the repository notice.
+This repository contains public reference material only. Unless a file states otherwise, the documentation and reference material are available under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** licence. See `LICENSE`.

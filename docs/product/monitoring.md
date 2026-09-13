@@ -1,68 +1,44 @@
 # Monitoring
 
-SemanticRisk monitoring is recurring observation of a domain so interpretation, evidence, claims, and access conditions can be compared over time.
+SemanticRisk monitoring is recurring entitled measurement of a public domain so visibility, interpretation, evidence, citations, comparison outcomes and access conditions can be compared over time.
+
+## Current subscription products
+
+- **Monitor — $99/month or $990/year**: recurring measurement/reporting for one domain.
+- **Compare & Monitor — $199/month or $1,990/year**: recurring primary-domain measurement plus comparison against up to three selected competitors.
+
+The exact execution cadence and next scheduled run are runtime product state rather than documentation facts.
+
+## Current recurring measurement breadth
+
+The current Monitor commercial cycle uses **30 neutral buyer/research questions** from Buyer Visibility Matrix v1.
+
+Compare & Monitor uses **40 questions** under the fixed primary-company comparison context.
+
+Exact provider/model lanes, repetitions and observation counts are versioned runtime measurement state.
 
 ## Purpose
 
-A single scan is a snapshot. Monitoring creates a sequence of observations.
+A single valid cycle is a baseline. Monitoring creates the repeated compatible evidence needed to detect and explain:
 
-That sequence can support detection and explanation of:
-
-- interpretation change;
-- claim change;
-- model disagreement;
-- content change;
-- capture or crawl regression;
-- other material differences between observations.
+- visibility/recommendation change;
+- interpretation or category change;
+- citation/source change;
+- claim or public-evidence change;
+- competitor displacement;
+- capture/crawl regression;
+- other material differences between compatible observations.
 
 Monitoring does not guarantee that every downstream AI system will behave consistently or that every change will be detected immediately.
 
-## Monitoring state
+## State and entitlement
 
-For product reasoning, monitoring has at least two important properties:
+Documentation must not be used to infer that monitoring is active for a particular account or domain.
 
-- **enabled / disabled**;
-- **cadence** when enabled.
+Authenticated runtime state is authoritative for current subscription entitlement, active domain/comparison set, next run, work state and report availability.
 
-The current product supports governed cadence choices including daily, weekly, monthly, and disabled states.
+## Disabling or changing recurrence
 
-The account-facing product state is authoritative. Documentation should not be used to infer that monitoring is active for a particular domain.
+If the product exposes a governed cadence or monitoring-state control, changing it affects future recurring work only. It does not imply deletion of historical evidence or reports.
 
-## Eligibility
-
-Recurring monitoring is a paid capability and can be subject to plan entitlement.
-
-A domain may also need to be verified, and the requesting user may need owner or administrative authority before recurring monitoring settings can be changed.
-
-If a user lacks eligibility, the assistant should explain the blocking condition rather than imply that the change was made.
-
-## Changing monitoring
-
-A monitoring cadence change is a controlled Amber action.
-
-The expected flow is:
-
-1. inspect current monitoring state;
-2. prepare the proposed target cadence;
-3. explain the effect;
-4. validate domain verification, authority, and plan eligibility;
-5. obtain explicit approval;
-6. confirm the proposal is still current;
-7. execute through the governed product action;
-8. report the resulting state.
-
-Nothing should be represented as changed merely because the proposal was prepared.
-
-## Disabling monitoring
-
-Disabling monitoring stops recurring monitoring for the selected domain.
-
-Disabling future recurring work does not mean historical observations, reports, or previously captured evidence have been deleted.
-
-Deletion and retention are separate concepts and should not be inferred from a monitoring-state change.
-
-## AI assistant guidance
-
-When asked questions such as "Are you monitoring my domain?" or "How often are you scanning me?", the assistant should inspect current account/domain state when that data is available.
-
-When asked to change monitoring, the assistant should use the governed action path rather than relying on documentation alone.
+An AI assistant should inspect current runtime state, explain the proposed effect and use the governed product action rather than claim that a change occurred merely because it was requested in natural language.

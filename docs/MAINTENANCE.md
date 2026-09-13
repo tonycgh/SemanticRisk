@@ -1,72 +1,51 @@
 # SemanticRisk Documentation Maintenance Contract
 
-The SemanticRisk documentation is part of the product surface and part of the authoritative knowledge corpus used by AI-assisted workflows.
+The SemanticRisk documentation is part of the product surface and the public knowledge corpus used by AI-assisted workflows.
 
 ## Operating rule
 
-Customer-facing product changes should trigger a documentation review before the work is considered complete.
+A customer-facing product change is not documentation-complete until the public knowledge model has been reviewed for consistency.
 
-A documentation review is required when a change affects any of the following:
+Review documentation when a change affects:
 
-- customer-visible capabilities;
-- domain, scan, claim, evidence, finding, report, monitoring, or account behaviour;
-- entitlement or plan requirements;
-- AI-assistant actions or explanations;
-- approval requirements or governed-action behaviour;
-- supported cadences, states, limits, or failure semantics;
-- public methodology or terminology;
-- public API behaviour;
-- billing-visible effects;
-- privacy, authority, verification, or access boundaries.
+- product promise or positioning;
+- pricing, plans or entitlement;
+- funnel or primary calls to action;
+- measurement method, question population or report contents;
+- readiness, scans, monitoring, comparison or failure semantics;
+- public terminology or methodology;
+- public/API route ownership visible to customers or AI systems;
+- AI-assistant actions, explanations or boundaries.
 
-## Daily review cadence
+## Maintenance cadence
 
-During active product development, review the documentation against current production changes at least once per development day.
+Use **event-driven documentation updates** as the primary rule: when the public contract changes, update the affected documentation in the same development cycle.
 
-The daily review does not require a documentation change when product behaviour has not changed. Its purpose is to detect documentation drift early.
+Periodic drift review is a backstop, not a substitute for event-driven maintenance. A separate repetitive documentation reminder is unnecessary when routine production/revenue review already checks for documentation drift.
 
-Suggested review flow:
+## Suggested review flow
 
-1. Review recent production commits and merged changes.
-2. Identify changes that alter a public concept, workflow, state, entitlement, or AI action.
-3. Update the relevant canonical documentation page.
-4. Update `llms.txt` or the documentation index when a new canonical page is introduced.
-5. Avoid documenting experimental or private implementation details as supported public behaviour.
-6. Record material public-documentation changes in `CHANGELOG.md`.
+1. Review the merged customer-facing change and the canonical private product contract.
+2. Identify which public concepts, prices, question counts, routes, states or boundaries changed.
+3. Update the relevant public documentation pages.
+4. Update `llms.txt`, `CURRENT_PRODUCT.md`, the documentation index or discovery claims when the canonical public knowledge model changed.
+5. Mark retired behaviour historical instead of leaving two active definitions.
+6. Record material public knowledge changes in `CHANGELOG.md`.
 
 ## Source priority
 
-Documentation must be grounded in current supported product behaviour.
+When sources disagree, prefer:
 
-When sources disagree, use this priority:
-
-1. current production/runtime behaviour;
-2. current private implementation and entitlement rules;
+1. current production/runtime behaviour for account- or cycle-specific state;
+2. current private canonical product and measurement contracts;
 3. current public SemanticRisk documentation;
-4. historical roadmaps, reports, and summaries;
+4. historical roadmaps, reports and summaries;
 5. general model knowledge.
 
-Public documentation must not expose private implementation details merely because they were used to verify the public contract.
+Public documentation must not expose private implementation details merely because those details were used to verify the public contract.
 
 ## Definition of done
 
-For customer-facing changes, the product change is documentation-complete when one of these is true:
+For customer-facing changes, documentation is complete when the affected public pages are updated or the change was explicitly reviewed and determined not to affect the public knowledge model.
 
-- relevant documentation has been updated; or
-- the change was reviewed and explicitly determined not to affect the public knowledge model.
-
-## AI-specific requirement
-
-Documentation should answer the questions an AI assistant needs in order to reason safely:
-
-- What is this object or capability?
-- What current state must be checked at runtime?
-- What may the user ask to do?
-- What prerequisites apply?
-- Does the action require approval?
-- What can change as a result?
-- What explicitly does not change?
-- What failure or stale-state conditions can occur?
-- What must not be inferred from documentation alone?
-
-The goal is not documentation volume. The goal is a current, authoritative, retrieval-friendly model of how SemanticRisk works.
+The goal is not documentation volume. The goal is one current, authoritative, retrieval-friendly model of how SemanticRisk works.

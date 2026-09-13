@@ -1,53 +1,44 @@
-# Historical: Comprehensive AI Visibility & Interpretation Review
+# Comprehensive Review
 
-> **Status: retired / historical documentation.** This document describes an earlier launch-stage SemanticRisk offer and is not a current commercial product.
->
-> Current product definition and pricing: https://semanticrisk.io/pricing/  
-> Current workflow: https://semanticrisk.io/how-it-works/  
-> Current machine-readable guide: https://semanticrisk.io/llms.txt
+The **Comprehensive Review** is the current one-time SemanticRisk assessment for a public domain.
 
-The former Comprehensive AI Visibility & Interpretation Review was a one-time professional assessment for a single company or primary domain.
+Current public price: **US$200 one time**.
 
-Historical public price: **US$200 one time**.
+It is designed to answer a practical question: how is this organisation currently being discovered, interpreted, supported by evidence, cited, compared and recommended by the measured AI systems, and what should be addressed next?
 
-The material below is retained only to preserve product history. It must not be used to infer current pricing, entitlement, report scope, verification credits, delivery commitments, subscriptions, or customer runtime state.
+## Scope
 
-## Former purpose
+A Review produces one coherent evidence cycle and one Unified Report. Depending on available evidence, it can include:
 
-The Review combined governed SemanticRisk measurement with supporting public evidence to answer a customer's current business question and establish a point-in-time baseline that could be tested after changes were made.
+- public access/readiness and representative website evidence;
+- evidence-grounded organisation, sector, category and buyer/risk context;
+- recurring public claims and tensions;
+- controlled buyer/research visibility and recommendation observations;
+- direct AI representation and later grounded verification where configured;
+- citation/source provenance;
+- representation/grounding gaps and claim assessment;
+- comparison or alternative-provider evidence when available and relevant;
+- prioritized **Do this**, **Watch this**, and supported **Advantage** findings;
+- a frozen Unified Report and printable/PDF rendering.
 
-## Former evidence scope
+## Current measurement breadth
 
-Depending on availability and relevance to the customer brief, the Review could include:
+The current Review uses **60 neutral buyer/research questions** from Buyer Visibility Matrix v1.
 
-- executive current-state assessment;
-- governed AI interpretation baseline;
-- entity and sector resolution;
-- provider-valid descriptions and cross-model agreement or disagreement;
-- extracted claims and public website evidence;
-- direct accessibility, crawl, robots.txt, and sitemap evidence;
-- representative site-wide machine-readable meaning findings where suitable;
-- controlled buyer-prompt visibility and citation evidence where measured;
-- competitor or alternative-provider observations where supported by stored evidence;
-- prioritised remediation recommendations.
+The matrix spans ten decision dimensions across six stable research perspectives. Questions are rendered from evidence-grounded context and must not force the target brand into discovery/recommendation answers merely to create a positive result.
 
-## Former verification model
+Exact provider/model lanes, repetitions and resulting observation totals are controlled by the active versioned measurement plan.
 
-The retired Review included five governed verification scans for post-fix comparison. This verification-credit model is no longer the current commercial model.
+## Evidence integrity
 
-## Former delivery model
+Fresh Review work gathers representative current site evidence before downstream AI measurement. If there is no usable representative evidence, the cycle is blocked rather than publishing an empty or misleading report.
 
-At that launch stage, comprehensive enrichment and final delivery were human-gated and included a written professional report and a 30-minute findings call. These are historical terms and should not be presented as current SemanticRisk commitments.
+A system-caused structurally invalid Review outcome should be repaired under the existing Review entitlement instead of requiring the customer to purchase the same outcome again.
 
-## Current replacement
+Completed reports remain frozen historical evidence even if later evidence, live re-checks or presentation code changes.
 
-SemanticRisk now uses one operational workspace and one customer-facing Unified Report per evidence cycle.
+## Relationship to subscriptions
 
-- Any public domain can be measured without proving ownership.
-- One SemanticRisk credit costs **US$5.95**.
-- Standard credit packs are **1, 10, 20 and 100 credits**.
-- A credit grants a current reusable Unified Report when no more than 30 days old, or funds/joins the next shared public-domain evidence cycle when no fresh reusable report exists.
-- An explicit early refresh consumes another credit.
-- Repeat completed evidence cycles can be compared for interpretation score, buyer-prompt visibility and mapped entity/sector change.
+A Review is a point-in-time baseline. **Monitor** adds recurring one-domain measurement. **Compare & Monitor** adds recurring comparison for a fixed primary domain and up to three selected competitors.
 
-For any conflict between this historical document and the current live SemanticRisk product, the live sources at semanticrisk.io are authoritative.
+The older human-gated Review variants, included verification-scan bundles and later $5.95 credit-pack replacement are historical product stages. They should not be presented as the current commercial Review.
