@@ -31,7 +31,7 @@ The current public funnel is:
 3. **Monitor — $99/month or $990/year** — recurring one-domain measurement, evidence retention, drift/change review, and reporting.
 4. **Compare & Monitor — $199/month or $1,990/year** — recurring primary-domain measurement plus competitor comparison for the primary domain and up to three selected competitors.
 
-The former $5.95 credit-pack model is historical. Credits may remain in internal records for compatibility with older accounts, but they are not the current public commercial offer.
+Legacy credit-pack offers are retired and are not part of the current public commercial model. Historical internal records may remain only where needed for compatibility or audit integrity.
 
 Any public domain can be evaluated without proving ownership. Product actions that affect an authenticated account still remain subject to the account's current permissions and entitlement.
 
