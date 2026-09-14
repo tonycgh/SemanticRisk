@@ -15,7 +15,7 @@ SemanticRisk uses one workspace and one customer-facing Unified Report.
 - **Monitor — $99/month or $990/year**: recurring measurement/reporting for one domain.
 - **Compare & Monitor — $199/month or $1,990/year**: recurring primary-domain measurement plus comparison against up to three selected competitors.
 
-The former $5.95 credit-pack model is historical. Do not present credit packs as the current public commercial offer.
+Legacy credit-pack offers are historical and must not be presented as the current public commercial offer.
 
 Any public domain can be measured without proving ownership. Authenticated actions remain subject to current account entitlement and permissions.
 
@@ -80,7 +80,7 @@ Compare & Monitor is anchored to one fixed primary company and its governed meas
 
 The current plan supports the primary domain plus up to three selected competitors. Competitor domains remain independently measurable evidence objects and do not imply ownership or affiliation.
 
-Compatible current evidence can be reused internally when the active subscription entitlement permits it. The current product does not require customers to manage per-domain credit purchases.
+Compatible current evidence can be reused internally when the active subscription entitlement permits it. The current product does not require customers to manage per-domain purchases.
 
 Detailed comparison interpretation belongs in the primary domain's Unified Report. Competitor reports remain supporting evidence.
 

@@ -1,6 +1,6 @@
 # SemanticRisk Current Product
 
-Current as of **2026-09-13**.
+Current as of **2026-09-14**.
 
 SemanticRisk provides AI visibility, interpretation, comparison and semantic-drift intelligence for public websites through one customer workspace and one Unified Report.
 
@@ -13,7 +13,7 @@ The current public product ladder is:
 - **Monitor — $99/month or $990/year**: recurring measurement and reporting for one domain.
 - **Compare & Monitor — $199/month or $1,990/year**: recurring primary-domain measurement plus comparison against up to three selected competitors.
 
-The former $5.95 credit-pack product is retired from the public commercial model. Historical credit, payment and grant records can remain for compatibility and audit integrity, but new customers should not be offered credit packs.
+Legacy credit-pack offers are retired from the public commercial model. Historical credit, payment and grant records can remain internally for compatibility and audit integrity, but new customers should not be offered credit packs.
 
 ## Evidence-cycle sequence
 
@@ -52,7 +52,7 @@ Exact provider/model lanes, repetitions and required observation totals are calc
 
 Compare & Monitor anchors comparison to one fixed primary company and its governed measurement context. Competitor domains remain independently measurable evidence objects, but comparison questions use the primary-company buyer/category frame so results are comparable.
 
-The plan supports the primary domain plus up to three selected competitors. Compatible current evidence can be reused internally when the active entitlement permits it; customers are not asked to manage per-domain credit purchases in the current commercial model.
+The plan supports the primary domain plus up to three selected competitors. Compatible current evidence can be reused internally when the active entitlement permits it; customers are not asked to manage per-domain purchases in the current commercial model.
 
 Detailed comparison interpretation belongs in the primary domain's Unified Report. Competitor reports remain supporting evidence rather than separate competing product surfaces.
 

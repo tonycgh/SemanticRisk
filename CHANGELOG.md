@@ -2,12 +2,20 @@
 
 This changelog records material changes to the public SemanticRisk knowledge model. It is not a production deployment log.
 
+## 2026-09-14 — Legacy credit-price cleanup
+
+### Changed
+
+- Removed the legacy credit-pack price from current public documentation and machine-readable guidance.
+- Kept the current commercial ladder explicit: **Free Public Check ($0) → Comprehensive Review ($200 one time) → Monitor ($99/month or $990/year) → Compare & Monitor ($199/month or $1,990/year)**.
+- Clarified that legacy credit-pack references are historical only and must not be presented as the current public offer.
+
 ## 2026-09-13 — Product and documentation reset
 
 ### Changed
 
 - Re-established one current commercial model: **Free Public Check ($0) → Comprehensive Review ($200 one time) → Monitor ($99/month or $990/year) → Compare & Monitor ($199/month or $1,990/year)**.
-- Retired the $5.95 credit-pack model from the public commercial documentation. Historical credit/payment/grant records may remain internally for compatibility only.
+- Retired the credit-pack model from the public commercial documentation. Historical credit/payment/grant records may remain internally for compatibility only.
 - Restored Comprehensive Review as the current one-time baseline product; older human-gated Review variants and bundled verification-scan promises remain historical.
 - Documented the current Buyer Visibility Matrix v1 commercial breadth: **60 questions for Review, 30 for Monitor, 40 for Compare & Monitor**.
 - Documented that the current matrix is neutral, evidence-grounded and organized across ten decision dimensions and six stable research perspectives.
@@ -29,4 +37,4 @@ This changelog records material changes to the public SemanticRisk knowledge mod
 
 ## Historical note
 
-Repository history before 2026-09-13 contains several product generations, including a $200 human-reviewed Review, verification bundles, a self-serve $5.95 credit model, and older plan names. These are historical when they conflict with `CURRENT_PRODUCT.md`, `llms.txt`, this changelog entry, or the live SemanticRisk product.
+Repository history before 2026-09-13 contains several product generations, including a human-reviewed Review, verification bundles, a self-serve credit model, and older plan names. These are historical when they conflict with `CURRENT_PRODUCT.md`, `llms.txt`, this changelog entry, or the live SemanticRisk product.
