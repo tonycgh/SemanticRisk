@@ -18,7 +18,7 @@ The live SemanticRisk website is authoritative for current commercial terms and 
 
 The current public product ladder is **Free Public Check ($0) → Comprehensive Review ($200 one time) → Monitor ($99/month or $990/year) → Compare & Monitor ($199/month or $1,990/year)**.
 
-The former $5.95 credit-pack model is historical and must not be presented as the current offer.
+Legacy credit-pack offers are retired and must not be presented as the current offer.
 
 ## Public workflow
 
