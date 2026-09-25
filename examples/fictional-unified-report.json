@@ -1,0 +1,145 @@
+{
+  "schema_version": "semanticrisk.sample-report.v1",
+  "fictional": true,
+  "disclaimer": "Demonstration only. Every company, domain, observation and result in this file is synthetic. No AI provider was queried and no real organisation was assessed.",
+  "report": {
+    "title": "Unified Report — Fictional Example",
+    "report_id": "SAMPLE-2026-09",
+    "generated_at": "2026-09-25T12:00:00Z",
+    "subject": {
+      "name": "Northstar Analytics",
+      "domain": "northstar-analytics.example"
+    },
+    "plan": "Compare & Monitor",
+    "cycle": {
+      "number": 2,
+      "methodology": "Buyer Visibility Matrix v1 — illustrative",
+      "compatible_with_previous": true
+    },
+    "comparison_set": [
+      {
+        "name": "Northstar Analytics",
+        "domain": "northstar-analytics.example"
+      },
+      {
+        "name": "Beacon Metrics",
+        "domain": "beacon-metrics.example"
+      },
+      {
+        "name": "Orbit Signal",
+        "domain": "orbit-signal.example"
+      }
+    ]
+  },
+  "executive_summary": {
+    "state": "Action required",
+    "statement": "The fictional company is technically reachable and is interpreted accurately when named, but it appears in only 9 of 40 neutral buyer-question observations. A competitor appears more often and owns most third-party citations.",
+    "decision": "Strengthen public evidence for the two buyer tasks where Northstar is absent, then repeat the same compatible matrix before claiming improvement."
+  },
+  "access_readiness": [
+    {
+      "check": "Homepage reachable",
+      "status": "pass",
+      "evidence": "Synthetic HTTP 200 observation"
+    },
+    {
+      "check": "robots.txt",
+      "status": "pass",
+      "evidence": "Synthetic policy permits evaluated crawlers"
+    },
+    {
+      "check": "sitemap.xml",
+      "status": "warning",
+      "evidence": "Synthetic sitemap omits three product-support pages"
+    },
+    {
+      "check": "llms.txt",
+      "status": "observed",
+      "evidence": "Present; use by downstream providers is not claimed"
+    },
+    {
+      "check": "structured organisation identity",
+      "status": "warning",
+      "evidence": "Organisation schema lacks sameAs and product relationships"
+    }
+  ],
+  "buyer_visibility": {
+    "completed_observations": 40,
+    "target_mentions": 9,
+    "target_visibility_rate": 0.225,
+    "owned_domain_citations": 3,
+    "alternatives": [
+      {
+        "name": "Beacon Metrics",
+        "mentions": 14
+      },
+      {
+        "name": "Orbit Signal",
+        "mentions": 6
+      }
+    ],
+    "interpretation": "This is controlled observation coverage, not consumer-chat market share."
+  },
+  "interpretation_assessment": {
+    "claims_reviewed": 8,
+    "supported": 5,
+    "partially_supported": 2,
+    "contradicted": 1,
+    "not_assessed": 0,
+    "material_gap": "The evaluated answer describes Northstar as enterprise-only, while the synthetic current pricing page includes a self-service plan.",
+    "boundary": "Unsupported does not automatically mean false or hallucinated."
+  },
+  "change_since_compatible_cycle": [
+    {
+      "measure": "Target mentions",
+      "previous": "4 of 40",
+      "current": "9 of 40",
+      "change": "+5 observations"
+    },
+    {
+      "measure": "Owned-domain citations",
+      "previous": "1",
+      "current": "3",
+      "change": "+2 citations"
+    },
+    {
+      "measure": "Supported claims",
+      "previous": "4 of 8",
+      "current": "5 of 8",
+      "change": "+1 supported claim"
+    }
+  ],
+  "causality_boundary": "These changes are measured associations between two compatible synthetic cycles. The report does not claim that a website edit caused them.",
+  "priorities": [
+    {
+      "rank": 1,
+      "action": "Publish one evidence-led page for the missing procurement buyer task.",
+      "why": "Northstar was absent in 8 of 8 synthetic procurement-oriented observations.",
+      "verify": "Repeat the same eight questions in the next compatible cycle."
+    },
+    {
+      "rank": 2,
+      "action": "Correct the enterprise-only ambiguity across pricing, product and organisation schema.",
+      "why": "One material interpretation conflicts with the synthetic current offer.",
+      "verify": "Re-run the branded interpretation probe and preserve the answer and sources."
+    },
+    {
+      "rank": 3,
+      "action": "Add omitted support pages to the sitemap and monitor discovery.",
+      "why": "Three relevant synthetic pages are public but absent from sitemap evidence.",
+      "verify": "Confirm sitemap inclusion, crawl retrieval and later citation movement separately."
+    }
+  ],
+  "monitoring_watchlist": [
+    "Whether Beacon Metrics continues to dominate procurement-oriented questions.",
+    "Whether the enterprise-only description persists after evidence is clarified.",
+    "Whether owned-domain citations increase without reducing third-party corroboration."
+  ],
+  "methodology_boundary": [
+    "All values are synthetic and selected only to demonstrate report structure.",
+    "A first observation is a baseline; drift requires a later compatible observation.",
+    "Technical readiness is not AI visibility.",
+    "Presence is not recommendation, and recommendation is not proof of suitability.",
+    "Results do not guarantee future model behaviour, ranking, citation or revenue."
+  ]
+}

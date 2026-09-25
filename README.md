@@ -6,7 +6,7 @@ SemanticRisk measures how AI systems discover, interpret, cite, compare, recomme
 
 > **AI visibility asks whether you appear. SemanticRisk also asks what was understood, what evidence supports it, how competitors are treated, and what changes over time.**
 
-[Website](https://semanticrisk.io) · [Documentation](https://semanticrisk.io/docs/) · [Methodology](https://semanticrisk.io/methodology/) · [Pricing](https://semanticrisk.io/pricing/) · [How it works](https://semanticrisk.io/how-it-works/)
+[Website](https://semanticrisk.io) · [Fictional sample report](https://semanticrisk.io/sample-report/) · [Documentation](https://semanticrisk.io/docs/) · [Methodology](https://semanticrisk.io/methodology/) · [Pricing](https://semanticrisk.io/pricing/) · [How it works](https://semanticrisk.io/how-it-works/)
 
 ---
 
@@ -87,6 +87,18 @@ Depending on available evidence, the Unified Report can include:
 - appendices for question identifiers, observation ledgers, site inventory, methodology and provenance when persisted.
 
 Missing evidence should be stated rather than invented. Diagnostic counts are not market share. Unsupported does not automatically mean hallucinated. A first observation does not establish drift. Presence of `llms.txt`, `claims.json`, a sitemap, schema or another machine-readable signal does not establish that an evaluated AI provider used it or that it caused a visibility result.
+
+---
+
+## Public fictional example
+
+A complete fictional Unified Report is available in both human-readable and machine-readable forms:
+
+- [Formatted sample on semanticrisk.io](https://semanticrisk.io/sample-report/)
+- [Markdown example](examples/fictional-unified-report.md)
+- [Structured JSON example](examples/fictional-unified-report.json)
+
+Every company, domain, observation and result in the example is synthetic. No AI provider was queried and no real organisation was assessed.
 
 ---
 
